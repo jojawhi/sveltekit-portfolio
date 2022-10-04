@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte';
-	import './styles.css';
+	import '../app.css';
+	import './styles.css'
 </script>
 
 <div class="app">
@@ -11,7 +12,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>Designed and developed by Josh White</p>
 	</footer>
 </div>
 
@@ -39,10 +40,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
+		color: #fcfcfc;
 	}
 
 	@media (min-width: 480px) {
