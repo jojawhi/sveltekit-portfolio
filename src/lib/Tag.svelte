@@ -2,6 +2,6 @@
   export let tag: string;
 </script>
 
-<div class="container rounded-lg bg-blue-500 px-2 py-1 w-min">
-  <p class='font-bold whitespace-nowrap'>{tag}</p>
+<div class="container rounded-lg px-4 py-2 w-min bg-gradient-to-r from-amber-400 to-pink-400">
+  <p class='font-bold whitespace-nowrap uppercase'>{tag}</p>
 </div>

@@ -4,17 +4,9 @@ import Project from "$lib/Project.svelte";
 
 const projects = [
   {
-    title: 'Portfolio',
-    role:'Sole developer',
-    description: 'this portfolio site',
-    tags: ['SvelteKit', 'Tailwind CSS'],
-    image: '',
-    url: '/',
-  },
-  {
     title: 'Hockey Canada',
     role:'Technical Project Manager, Developer',
-    description: 'Hockey Canada website',
+    description: 'Hockey Canada website proof of concept',
     tags: ['Next.js', 'Styled Components'],
     image: '',
     url: '/',
@@ -23,18 +15,34 @@ const projects = [
     title: 'Folkwise company website',
     role:'Developer',
     description: 'folkwise',
-    tags: ['SvelteKit', 'SCSS'],
+    tags: ['SvelteKit', 'SCSS', 'Markdown'],
     image: '',
     url: '/',
   },
   {
     title: 'Tabeyou',
-    role:'Sole developer',
+    role:'Designer, Developer',
     description: 'Meal planning crud app',
-    tags: ['Next.js', 'SCSS'],
+    tags: ['Next.js', 'SCSS', 'Firebase'],
     image: '',
     url: '/',
-  }
+  },
+  {
+    title: 'PELA - Portfolio for English Language Assessment',
+    role:'Designer, Developer',
+    description: 'LMS for LINC programs in Canada',
+    tags: ['Next.js', 'Tailwind CSS', 'Firebase'],
+    image: '',
+    url: '/',
+  },
+  {
+    title: 'Portfolio',
+    role:'Sole developer',
+    description: 'this portfolio site',
+    tags: ['SvelteKit', 'Tailwind CSS'],
+    image: '',
+    url: '/',
+  },
 ]
 
 </script>

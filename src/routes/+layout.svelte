@@ -1,18 +1,31 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
+	import Name from '$lib/Name.svelte';
+	import { nameStore } from '$lib/stores/name';
 	import '../app.css';
-	import './styles.css'
+	import './styles.css';
+
+	const activateLetter = (index: number) => {
+		$nameStore[index].active = true;
+	};
 </script>
 
 <div class="app">
 	<Header />
+	<Name />
 
 	<main>
 		<slot />
 	</main>
 
 	<footer>
-		<p>Designed and developed by Josh White. Copyright 2022.</p>
+		<p>
+			Designed and developed by Josh White. Copyright 2022 <a
+				href="https://github.com/jojawhi"
+				target="_blank"
+				on:click={() => activateLetter(5)}>GitHub</a
+			>
+		</p>
 	</footer>
 </div>
 

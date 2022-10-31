@@ -13,7 +13,7 @@
 	export let project: Project;
 </script>
 
-<div class="project-card my-4 p-4 bg-white">
+<div class="project-card my-4 p-4 rounded-lg bg-gradient-to-r from-slate-200 to-slate-700">
 	<h2 class="font-bold">{project.title}</h2>
 	<h3>{project.role}</h3>
 	<p>{project.description}</p>

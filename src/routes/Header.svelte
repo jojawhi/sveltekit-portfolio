@@ -1,5 +1,10 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
+	import { nameStore } from '$lib/stores/name';
+
+	const activateLetter = (index: number) => {
+		$nameStore[index].active = true;
+	};
 	// import logo from '$lib/images/svelte-logo.svg';
 	// import github from '$lib/images/github.svg';
 </script>
@@ -16,19 +21,19 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}>
+			<li class:active={$page.url.pathname === '/'} on:click={() => activateLetter(0)}>
 				<a href="/">Home</a>
 			</li>
-			<li class:active={$page.url.pathname === '/portfolio'}>
+			<li class:active={$page.url.pathname === '/portfolio'} on:click={() => activateLetter(1)}>
 				<a href="/portfolio">Portfolio</a>
 			</li>
-			<li class:active={$page.url.pathname === '/about'}>
+			<li class:active={$page.url.pathname === '/about'} on:click={() => activateLetter(2)}>
 				<a href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname === '/blog'}>
+			<li class:active={$page.url.pathname === '/blog'} on:click={() => activateLetter(3)}>
 				<a href="/blog">Blog</a>
 			</li>
-			<li class:active={$page.url.pathname === '/contact'}>
+			<li class:active={$page.url.pathname === '/contact'} on:click={() => activateLetter(4)}>
 				<a href="/contact">Contact</a>
 			</li>
 			<!-- <li class:active={$page.url.pathname.startsWith('/sverdle')}>

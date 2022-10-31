@@ -10,17 +10,6 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<!-- <span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app -->
-		JOJAWHI
-	</h1>
 	<h2>Frontend Developer</h2>
 	<p>Welcome to my playground!</p>
 
@@ -28,8 +17,7 @@
 </section>
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 	section {
 		display: flex;
@@ -40,13 +28,12 @@
 		color: #fcfcfc;
 	}
 
-	h1 {
-		font-family:'Raleway', sans-serif;
+	/* h1 {
+		font-family: 'Gotham', sans-serif;
 		font-weight: 600;
 		font-size: 6rem;
 		width: 100%;
-
-	}
+	} */
 
 	/* .welcome {
 		display: block;
