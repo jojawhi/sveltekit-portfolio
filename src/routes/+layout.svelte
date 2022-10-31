@@ -12,7 +12,7 @@
 	</main>
 
 	<footer>
-		<p>Designed and developed by Josh White</p>
+		<p>Designed and developed by Josh White. Copyright 2022.</p>
 	</footer>
 </div>
 

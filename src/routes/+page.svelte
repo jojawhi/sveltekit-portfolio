@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>jojawhi</title>
+	<meta name="description" content="Josh White's personal website" />
 </svelte:head>
 
 <section>
@@ -21,7 +21,8 @@
 		to your new<br />SvelteKit app -->
 		JOJAWHI
 	</h1>
-	<h2>Frontend developer</h2>
+	<h2>Frontend Developer</h2>
+	<p>Welcome to my playground!</p>
 
 	<!-- <Counter /> -->
 </section>

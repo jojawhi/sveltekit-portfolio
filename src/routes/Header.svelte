@@ -19,12 +19,21 @@
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">Home</a>
 			</li>
+			<li class:active={$page.url.pathname === '/portfolio'}>
+				<a href="/portfolio">Portfolio</a>
+			</li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname.startsWith('/sverdle')}>
-				<a href="/sverdle">Sverdle</a>
+			<li class:active={$page.url.pathname === '/blog'}>
+				<a href="/blog">Blog</a>
 			</li>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<a href="/contact">Contact</a>
+			</li>
+			<!-- <li class:active={$page.url.pathname.startsWith('/sverdle')}>
+				<a href="/sverdle">Sverdle</a>
+			</li> -->
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
