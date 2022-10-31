@@ -9,9 +9,16 @@
 	<meta name="description" content="Josh White's personal website" />
 </svelte:head>
 
-<section>
+<section class="flex-col gap-4">
 	<h2>Frontend Developer</h2>
 	<p>Welcome to my playground!</p>
+	<p>
+		I use my personal site to experiment with new technologies and techniques that I learn, and I've
+		turned this current version into a little game. Around the site, you will find triggers that
+		will transform the letters in my name and give you some insight into my personality. Think you
+		can find them all?
+	</p>
+	<p>Happy hunting!</p>
 
 	<!-- <Counter /> -->
 </section>
