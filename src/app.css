@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Ringbearer Medium';
+		src: local('Ringbearer Medium'), local('Ringbearer-Medium'), local('ringbearer medium'),
+			local('ringbearer-medium'), url('/fonts/ringbearer/ringbearer.TTF');
+		font-weight: normal;
+		font-display: swap;
+	}
+}

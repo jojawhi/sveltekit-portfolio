@@ -20,7 +20,7 @@
 
 	<footer>
 		<p>
-			Designed and developed by Josh White. Copyright 2022 <a
+			Designed and developed by Josh White. &copy; Copyright 2022 <a
 				href="https://github.com/jojawhi"
 				target="_blank"
 				on:click={() => activateLetter(5)}>GitHub</a
