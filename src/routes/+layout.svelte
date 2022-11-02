@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import Name from '$lib/Name.svelte';
+	import Link from '$lib/common/Link.svelte';
 	import { nameStore } from '$lib/stores/name';
 	import '../app.css';
 	import './styles.css';
@@ -20,11 +21,13 @@
 
 	<footer>
 		<p>
-			Designed and developed by Josh White. &copy; Copyright 2022 <a
+			Designed and developed by Josh White. &copy; Copyright 2022.
+			<Link
+				type="default"
 				href="https://github.com/jojawhi"
-				target="_blank"
-				on:click={() => activateLetter(5)}>GitHub</a
-			>
+				anchorText="GitHub"
+				on:click={() => activateLetter(5)}
+			/>
 		</p>
 	</footer>
 </div>
