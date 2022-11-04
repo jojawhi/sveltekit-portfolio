@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let width: string = `${20}rem`;
+	export let width: string = `${24}rem`;
 
 	let hover: boolean = false;
 
@@ -258,7 +258,7 @@
 			top: 50%;
 			right: 50%;
 			background-color: white;
-			transform: translate(50%, -50%) rotate(0);
+			transform: translate(50%, 0) rotate(0);
 		}
 
 		20% {
