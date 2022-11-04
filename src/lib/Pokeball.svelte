@@ -1,4 +1,6 @@
 <script lang="ts">
+	export let width: string = `${20}rem`;
+
 	let hover: boolean = false;
 
 	const onHover = () => {
@@ -6,13 +8,13 @@
 	};
 </script>
 
-<div class="pokeball-container" on:mouseenter={onHover}>
+<div style="--width:{width}" class="pokeball-container" on:mouseenter={onHover}>
 	<div class={hover ? 'red redMoveOut' : 'red'} />
 	<div class={hover ? 'white whiteMoveOut' : 'white'} />
 	<div class="center" />
 	<div class="center-outline" />
 	<div class="center-button" />
-	<div class="center-line" />
+	<div class={hover ? 'center-line shrink-line' : 'center-line'} />
 	<p class="choose">Choose</p>
 	<p class="me">Me!</p>
 </div>
@@ -20,198 +22,83 @@
 <style>
 	.pokeball-container {
 		position: relative;
-		height: 200px;
-		width: 100%;
-		background-color: palegoldenrod;
+		padding-bottom: calc(var(--width) / 3.5);
+		width: var(--width);
+		background-color: lightblue;
+		cursor: pointer;
 	}
 
-	/* Center line hover effect */
+	/* Center line grow and rotate on hover */
 	.pokeball-container:hover > :nth-child(6) {
-		width: 200px;
-		transform: translate(-50%, -50%) rotate(0deg);
+		animation: rotateLine 150ms linear 150ms forwards;
 	}
 
-	/* Text hover effects */
+	/* Text disappear on hover */
 	.pokeball-container:hover > :nth-child(7),
 	.pokeball-container:hover > :nth-child(8) {
 		opacity: 0;
 	}
 
-	/* Red half hover effect */
+	/* Red half animate on hover */
 	.pokeball-container:hover > :nth-child(1) {
-		animation: redMoveIn 500ms ease-out forwards;
+		animation: redMoveIn 300ms ease-out forwards;
 	}
 
-	@keyframes redMoveIn {
-		0% {
-			top: 25%;
-			left: 0;
-			background-color: transparent;
-			transform: translateX(0) rotate(-90deg);
-		}
-
-		70% {
-			top: 25%;
-			left: 40%;
-			background-color: transparent;
-			transform: translateX(-40%) rotate(-90deg);
-		}
-
-		80% {
-			/* top: 0; */
-			top: 25%;
-			/* left: 50%; */
-			left: 45%;
-			background-color: red;
-			/* transform: translateX(-50%) rotate(0); */
-			transform: translateX(-50%) rotate(-90deg);
-		}
-
-		100% {
-			top: 0;
-			left: 50%;
-			background-color: red;
-			transform: translateX(-50%) rotate(0);
-		}
-	}
-	@keyframes redMoveOut {
-		0% {
-			top: 0;
-			left: 50%;
-			background-color: red;
-			transform: translateX(-50%) rotate(0);
-		}
-
-		20% {
-			top: 25%;
-			left: 40%;
-			background-color: transparent;
-			transform: translateX(-40%) rotate(-90deg);
-		}
-
-		100% {
-			top: 25%;
-			left: 0;
-			background-color: transparent;
-			transform: translateX(0) rotate(-90deg);
-		}
-	}
-
-	/* White half */
+	/* White half animate on hover */
 	.pokeball-container:hover > :nth-child(2) {
-		animation: whiteMoveIn 500ms ease-out forwards;
+		animation: whiteMoveIn 300ms ease-out forwards;
 	}
 
-	@keyframes whiteMoveIn {
-		0% {
-			top: 25%;
-			/* right: 0; */
-			background-color: transparent;
-			transform: translateX(0) rotate(-90deg);
-		}
-
-		70% {
-			top: 25%;
-			/* right: 25%; */
-			background-color: transparent;
-			transform: translateX(-40%) rotate(-90deg);
-		}
-
-		80% {
-			/* top: 50%; */
-			top: 25%;
-			/* right: 29.825%; */
-			right: 24.775%;
-			background-color: white;
-			/* transform: translateX(-50%) rotate(0); */
-			transform: translateX(-50%) rotate(-90deg);
-		}
-
-		100% {
-			top: 50%;
-			right: 29.825%;
-			background-color: white;
-			transform: translateX(-50%) rotate(0);
-		}
-	}
-
-	@keyframes whiteMoveOut {
-		0% {
-			top: 50%;
-			right: 29.825%;
-			background-color: white;
-			transform: translateX(-50%) rotate(0);
-		}
-
-		20% {
-			top: 25%;
-			right: 25%;
-			background-color: transparent;
-			transform: translateX(-40%) rotate(-90deg);
-		}
-
-		100% {
-			top: 25%;
-			right: 0;
-			background-color: transparent;
-			transform: translateX(0) rotate(-90deg);
-		}
-	}
-
-	/* @keyframes rotateLine {
-		0% {
-			width: 50px;
-			transform: translate(-50%, -50%) rotate(-90deg);
-		}
-
-		100% {
-			width: 200px;
-			transform: translate(-50%, -50%) rotate(0deg);
-		}
-	} */
-
-	.red {
-		position: absolute;
-		height: 100px;
-		width: 200px;
-		top: 25%;
-		border-top: 5px solid black;
-		border-left: 5px solid black;
-		border-right: 5px solid black;
-		border-radius: 100px 100px 0 0;
-		transform: rotate(-90deg);
-		transition: all 300ms;
-		z-index: 1;
-	}
-
+	/* Reverse animation classes added with JS on first hover */
+	/* Prevents the reverse animation running on load */
 	.redMoveOut {
 		animation: redMoveOut 500ms ease-out forwards;
-	}
-
-	.white {
-		position: absolute;
-		height: 100px;
-		width: 200px;
-		top: 25%;
-		right: 0;
-		border-bottom: 5px solid black;
-		border-left: 5px solid black;
-		border-right: 5px solid black;
-		border-radius: 100px 100px 0 0;
-		border-radius: 0 0 100px 100px;
-		transform: rotate(-90deg);
-		transition: all 300ms;
-		z-index: 1;
 	}
 
 	.whiteMoveOut {
 		animation: whiteMoveOut 500ms ease-out forwards;
 	}
 
+	.shrink-line {
+		animation: shrinkLine 300ms linear forwards;
+	}
+
+	/* Pieces */
+	.red {
+		position: absolute;
+		padding-top: 12%;
+		width: 25%;
+		top: 50%;
+		left: 0;
+		border-top: 2px solid black;
+		border-left: 2px solid black;
+		border-right: 2px solid black;
+		border-radius: 1000px 1000px 0 0;
+		transform: translateY(-50%) rotate(-90deg);
+		transition: all 300ms;
+		z-index: 2;
+	}
+
+	.white {
+		position: absolute;
+		padding-top: 12%;
+		width: 25%;
+		top: 50%;
+		right: 0;
+		border-bottom: 2px solid black;
+		border-left: 2px solid black;
+		border-right: 2px solid black;
+		border-radius: 100px 100px 0 0;
+		border-radius: 0 0 1000px 1000px;
+		transform: translateY(-50%) rotate(-90deg);
+		transition: all 300ms;
+		z-index: 1;
+	}
+
 	.center {
 		position: absolute;
-		height: 40px;
-		width: 40px;
+		width: 5.5%;
+		padding-bottom: 5.5%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -222,8 +109,8 @@
 
 	.center-outline {
 		position: absolute;
-		height: 60px;
-		width: 60px;
+		width: 8%;
+		padding-bottom: 8%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -232,10 +119,22 @@
 		z-index: 9;
 	}
 
+	.center-button {
+		position: absolute;
+		width: 3.5%;
+		padding-bottom: 3%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		border-radius: 1000px;
+		border: 1px solid black;
+		z-index: 11;
+	}
 	.center-line {
 		position: absolute;
-		height: 12px;
-		width: 50px;
+		height: 4%;
+		width: 2%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) rotate(-90deg);
@@ -244,40 +143,160 @@
 		transition: all 500ms ease-in;
 	}
 
-	.center-button {
-		position: absolute;
-		height: 30px;
-		width: 30px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: white;
-		border-radius: 1000px;
-		border: 2px solid black;
-		z-index: 11;
-	}
-
+	/* Text */
 	.choose {
 		position: absolute;
 		top: 0;
 		left: 50%;
-		font-size: 2rem;
+		font-size: calc(var(--width) - (var(--width) * 0.93));
 		font-weight: bold;
 		text-transform: uppercase;
-		transform: translate(-50%, 50%);
+		transform: translate(-50%, 0);
 		opacity: 1;
 		transition: all 400ms;
 	}
 
 	.me {
 		position: absolute;
-		top: 50%;
+		bottom: 0;
 		left: 50%;
-		font-size: 2rem;
+		font-size: calc(var(--width) - (var(--width) * 0.93));
 		font-weight: bold;
 		text-transform: uppercase;
-		transform: translate(-50%, 60%);
+		transform: translate(-50%, 0);
 		opacity: 1;
 		transition: all 400ms;
+	}
+
+	/* Animations */
+
+	/* Red half animations */
+	@keyframes redMoveIn {
+		0% {
+			top: 50%;
+			left: 0;
+			background-color: transparent;
+			transform: translate(0, -50%) rotate(-90deg);
+		}
+
+		70% {
+			top: 50%;
+			left: 40%;
+			background-color: transparent;
+			transform: translate(-40%, -50%) rotate(-90deg);
+		}
+
+		80% {
+			top: 50%;
+			left: 45%;
+			background-color: red;
+			transform: translate(-45%, -50%) rotate(-90deg);
+		}
+
+		100% {
+			top: 50%;
+			left: 50%;
+			background-color: red;
+			transform: translate(-50%, -100%) rotate(0);
+		}
+	}
+	@keyframes redMoveOut {
+		0% {
+			top: 50%;
+			left: 50%;
+			background-color: red;
+			transform: translate(-50%, -50%) rotate(0);
+		}
+
+		20% {
+			top: 50%;
+			left: 45%;
+			background-color: transparent;
+			transform: translate(-45%, -50%) rotate(-90deg);
+		}
+
+		100% {
+			top: 50%;
+			left: 0;
+			background-color: transparent;
+			transform: translate(0, -50%) rotate(-90deg);
+		}
+	}
+
+	/* White half animations */
+	@keyframes whiteMoveIn {
+		0% {
+			top: 50%;
+			background-color: transparent;
+			transform: translate(0, -50%) rotate(-90deg);
+		}
+
+		70% {
+			top: 50%;
+			right: 40%;
+			background-color: transparent;
+			transform: translate(40%, -50%) rotate(-90deg);
+		}
+
+		80% {
+			top: 50%;
+			right: 45%;
+			background-color: white;
+			transform: translate(45%, -50%) rotate(-90deg);
+		}
+
+		100% {
+			top: 50%;
+			right: 50%;
+			background-color: white;
+			transform: translate(50%, 0) rotate(0);
+		}
+	}
+
+	@keyframes whiteMoveOut {
+		0% {
+			top: 50%;
+			right: 50%;
+			background-color: white;
+			transform: translate(50%, -50%) rotate(0);
+		}
+
+		20% {
+			top: 50%;
+			right: 25%;
+			background-color: transparent;
+			transform: translate(25%, -50%) rotate(-90deg);
+		}
+
+		100% {
+			top: 50%;
+			right: 0;
+			background-color: transparent;
+			transform: translate(0, -50%) rotate(-90deg);
+		}
+	}
+
+	/* Center line animations */
+	@keyframes rotateLine {
+		0% {
+			width: 2.75%;
+			transform: translate(-50%, -50%) rotate(-90deg);
+		}
+
+		100% {
+			width: 25%;
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+	}
+	@keyframes shrinkLine {
+		0% {
+			width: 25%;
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+
+		100% {
+			width: 2.75%;
+			transform: translate(-50%, -50%) rotate(-90deg);
+		}
 	}
 </style>
