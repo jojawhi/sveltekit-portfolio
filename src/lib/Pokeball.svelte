@@ -2,13 +2,22 @@
 	export let width: string = `${24}rem`;
 
 	let hover: boolean = false;
+	let pulse: boolean = false;
 
 	const onHover = () => {
 		hover = true;
 	};
+
+	const onClick = () => {
+		pulse = true;
+
+		setTimeout(() => {
+			pulse = false;
+		}, 250);
+	};
 </script>
 
-<div style="--width:{width}" class="pokeball-container" on:mouseenter={onHover}>
+<div style="--width:{width}" class="pokeball-container" on:mouseenter={onHover} on:click={onClick}>
 	<div class={hover ? 'red redMoveOut' : 'red'} />
 	<div class={hover ? 'white whiteMoveOut' : 'white'} />
 	<div class="center" />
@@ -17,6 +26,8 @@
 	<div class={hover ? 'center-line shrink-line' : 'center-line'} />
 	<p class="choose">Choose</p>
 	<p class="me">Me!</p>
+	<div class={pulse ? 'pulse pulse-outer-div' : 'pulse-outer-div'} />
+	<div class={pulse ? 'pulse pulse-inner-div' : 'pulse-inner-div'} />
 </div>
 
 <style>
@@ -24,8 +35,18 @@
 		position: relative;
 		padding-bottom: calc(var(--width) / 3.5);
 		width: var(--width);
-		background-color: lightblue;
+		/* background-color: lightblue; */
 		cursor: pointer;
+	}
+
+	/* Red half animate on hover */
+	.pokeball-container:hover > :nth-child(1) {
+		animation: redMoveIn 300ms ease-out forwards;
+	}
+
+	/* White half animate on hover */
+	.pokeball-container:hover > :nth-child(2) {
+		animation: whiteMoveIn 300ms ease-out forwards;
 	}
 
 	/* Center line grow and rotate on hover */
@@ -37,16 +58,6 @@
 	.pokeball-container:hover > :nth-child(7),
 	.pokeball-container:hover > :nth-child(8) {
 		opacity: 0;
-	}
-
-	/* Red half animate on hover */
-	.pokeball-container:hover > :nth-child(1) {
-		animation: redMoveIn 300ms ease-out forwards;
-	}
-
-	/* White half animate on hover */
-	.pokeball-container:hover > :nth-child(2) {
-		animation: whiteMoveIn 300ms ease-out forwards;
 	}
 
 	/* Reverse animation classes added with JS on first hover */
@@ -61,6 +72,19 @@
 
 	.shrink-line {
 		animation: shrinkLine 300ms linear forwards;
+	}
+
+	/* Pulse on click */
+	/* .pokeball-container:active > :nth-child(9) {
+		animation: pulseOuter 250ms linear forwards;
+	}
+
+	.pokeball-container:active > :nth-child(10) {
+		animation: pulseInner 250ms linear forwards;
+	} */
+
+	.pulse {
+		animation: pulse 250ms linear forwards;
 	}
 
 	/* Pieces */
@@ -166,6 +190,34 @@
 		transform: translate(-50%, 0);
 		opacity: 1;
 		transition: all 400ms;
+	}
+
+	.pulse-outer-div {
+		position: absolute;
+		padding-top: 25%;
+		width: 25.75%;
+		top: 50%;
+		left: 50%;
+		background-color: transparent;
+		border: 1px solid yellow;
+		border-radius: 1000px;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		z-index: 12;
+	}
+
+	.pulse-inner-div {
+		position: absolute;
+		width: 8.75%;
+		padding-bottom: 8%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: transparent;
+		border: 1px solid yellow;
+		border-radius: 50%;
+		opacity: 0;
+		z-index: 12;
 	}
 
 	/* Animations */
@@ -297,6 +349,24 @@
 		100% {
 			width: 2.75%;
 			transform: translate(-50%, -50%) rotate(-90deg);
+		}
+	}
+
+	/* Pulse on click animations */
+	@keyframes pulse {
+		0% {
+			opacity: 0;
+			transform: translate(-50%, -50%) scale(1);
+		}
+
+		50% {
+			opacity: 0.5;
+			transform: translate(-50%, -50%) scale(1.5);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translate(-50%, -50%) scale(1.75);
 		}
 	}
 </style>
