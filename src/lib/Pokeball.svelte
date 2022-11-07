@@ -1,5 +1,11 @@
 <script lang="ts">
-	export let width: string = `${24}rem`;
+	import { nameStore } from './stores/name';
+
+	export let width: string = `${12}rem`;
+
+	const activateLetter = (index: number) => {
+		$nameStore[index].active = true;
+	};
 
 	let hover: boolean = false;
 	let pulse: boolean = false;
@@ -14,6 +20,8 @@
 		setTimeout(() => {
 			pulse = false;
 		}, 250);
+
+		activateLetter(2);
 	};
 </script>
 
@@ -199,7 +207,7 @@
 		top: 50%;
 		left: 50%;
 		background-color: transparent;
-		border: 1px solid yellow;
+		border: 1px solid #f0abfc;
 		border-radius: 1000px;
 		transform: translate(-50%, -50%);
 		opacity: 0;
@@ -214,7 +222,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background-color: transparent;
-		border: 1px solid yellow;
+		border: 1px solid #f0abfc;
 		border-radius: 50%;
 		opacity: 0;
 		z-index: 12;
