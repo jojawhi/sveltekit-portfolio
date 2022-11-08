@@ -46,7 +46,7 @@ export const nameStore = writable([
 	{
 		id: 7,
 		letter: 'i',
-		image: '/assets/images/lightsabre.svg',
+		image: '/assets/images/screwdriver.svg',
 		alt: 'A lightsabre from Star Wars in place of a letter I',
 		active: false
 	}

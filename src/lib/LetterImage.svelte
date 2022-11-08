@@ -4,5 +4,5 @@
 </script>
 
 <div class="container">
-	<img {src} {alt} />
+	<img class="max-h-52" {src} {alt} />
 </div>

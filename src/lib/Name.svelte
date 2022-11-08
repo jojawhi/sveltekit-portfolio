@@ -3,7 +3,7 @@
 	import LetterImage from './LetterImage.svelte';
 </script>
 
-<div class="container grid grid-cols-7 mx-auto">
+<div class="container grid grid-cols-7 gap-2 mx-auto">
 	{#each $nameStore as letter}
 		{#if letter.active}
 			<!-- <span class="active text-white text-7xl font-bold p-4">{letter.image}</span> -->
