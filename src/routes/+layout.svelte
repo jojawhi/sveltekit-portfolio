@@ -13,9 +13,9 @@
 
 <div class="app">
 	<Header />
-	<Name />
 
 	<main>
+		<Name />
 		<slot />
 	</main>
 

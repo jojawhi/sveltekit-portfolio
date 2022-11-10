@@ -41,6 +41,7 @@
 <style>
 	.pokeball-container {
 		position: relative;
+		margin: 0 auto;
 		padding-bottom: calc(var(--width) / 3.5);
 		width: var(--width);
 		/* background-color: lightblue; */

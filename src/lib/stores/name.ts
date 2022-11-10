@@ -47,7 +47,7 @@ export const nameStore = writable([
 		id: 7,
 		letter: 'i',
 		image: '/assets/images/screwdriver.svg',
-		alt: 'A lightsabre from Star Wars in place of a letter I',
+		alt: `The Tenth Doctor's sonic screwdriver in place of a letter I`,
 		active: false
 	}
 ]);
