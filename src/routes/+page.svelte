@@ -6,7 +6,10 @@
 
 <svelte:head>
 	<title>jojawhi</title>
-	<meta name="description" content="Josh White's personal website" />
+	<meta
+		name="description"
+		content="Josh White's full stack software developer portfolio, showcasing web development projects and experience with JavaScript, TypeScript, CSS, React.js, and Svelte."
+	/>
 </svelte:head>
 
 <section class="flex-col gap-4">

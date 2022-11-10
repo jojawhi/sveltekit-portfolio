@@ -2,6 +2,6 @@
 	export let onClick: () => void;
 </script>
 
-<button on:click={onClick}>
+<button class="w-min bg-white mx-auto" on:click={onClick}>
 	<slot />
 </button>
