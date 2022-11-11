@@ -3,7 +3,7 @@
 	import LetterImage from './LetterImage.svelte';
 </script>
 
-<div class="container grid grid-cols-7 gap-2 mx-auto text-center py-20">
+<div class="container grid grid-cols-7 gap-6 mx-auto text-center py-20">
 	{#each $nameStore as letter}
 		{#if letter.active}
 			<!-- <span class="active text-white text-7xl font-bold p-4">{letter.image}</span> -->

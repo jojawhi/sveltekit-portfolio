@@ -4,8 +4,8 @@ export const nameStore = writable([
 	{
 		id: 1,
 		letter: 'j',
-		image: '/assets/images/shenron.svg',
-		alt: 'The dragon Shenron from Dragonball Z in the shape of a cursive capital letter J',
+		image: '/assets/images/leaf-totoro.svg',
+		alt: 'A leaf and stem in the shape of a capital letter J with a small blue Totoro sitting on it.',
 		active: false
 	},
 	{
@@ -32,8 +32,8 @@ export const nameStore = writable([
 	{
 		id: 5,
 		letter: 'w',
-		image: '/assets/images/who.svg',
-		alt: 'The letter W from the Doctor Who logo',
+		image: '/assets/images/xwing.svg',
+		alt: 'Bird eye view of an X-Wing fighter from Star Wars in place of a letter W',
 		active: false
 	},
 	{
