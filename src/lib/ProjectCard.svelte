@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Text from './common/Text.svelte';
 	import Link from '$lib/common/Link.svelte';
 	import Tag from './Tag.svelte';
 
@@ -23,9 +24,9 @@
 >
 	<div class="flex flex-col justify-between">
 		<div class="flex flex-col">
-			<h2 class="font-bold text-white">{project.title}</h2>
-			<h3 class="text-white">{project.role}</h3>
-			<p class="text-white mt-6">{project.description}</p>
+			<Text type="heading" content={project.title} />
+			<Text type="subheading" content={project.role} />
+			<Text type="body" content={project.description} />
 		</div>
 		<div class="flex gap-2">
 			{#each project.tags as tag}
@@ -35,6 +36,6 @@
 		<Link type="project" href={project.url} anchorText="Go to Project" />
 	</div>
 	<div class="image-wrapper w-2/5 align-self-end">
-		<img class="rounded-lg" src="/assets/images/folkwise.png" alt="folkwise website screenshot" />
+		<img class="rounded-lg" src={project.image} alt="folkwise website screenshot" />
 	</div>
 </div>

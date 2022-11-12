@@ -7,7 +7,7 @@
 	--color-bg-0: rgb(202, 216, 228);
 	--color-bg-1: hsl(209, 36%, 86%);
 	--color-bg-2: hsl(224, 44%, 95%);
-	--color-bg-3: #27272a;
+	--color-bg-3: #1b1b1d;
 	--color-theme-1: #ff3e00;
 	--color-theme-2: #40b3ff;
 	--color-text: rgba(0, 0, 0, 0.7);
@@ -31,11 +31,11 @@ body {
 		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%); */
 }
 
-h1,
+/* h1,
 h2,
 p {
 	font-weight: 400;
-}
+} */
 
 p {
 	line-height: 1.5;
@@ -44,6 +44,7 @@ p {
 a {
 	color: var(--color-theme-1);
 	text-decoration: none;
+	transition: all 300ms;
 }
 
 a:hover {

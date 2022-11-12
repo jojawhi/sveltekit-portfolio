@@ -4,42 +4,42 @@
 	const projects = [
 		{
 			title: 'Hockey Canada',
-			role: 'Technical Project Manager, Developer',
+			role: 'Technical Project Manager, Support Developer',
 			description: 'Hockey Canada website proof of concept',
-			tags: ['Next.js', 'Styled Components'],
-			image: '',
+			tags: ['Next.js', 'Styled Components', 'Linear'],
+			image: '/assets/images/hc.png',
 			url: '/'
 		},
 		{
-			title: 'Folkwise company website',
+			title: 'Folkwise.io',
 			role: 'Developer',
 			description: 'folkwise',
 			tags: ['SvelteKit', 'SCSS', 'Markdown'],
-			image: '',
+			image: '/assets/images/folkwise.png',
 			url: '/'
 		},
-		{
-			title: 'Tabeyou',
-			role: 'Designer, Developer',
-			description: 'Meal planning crud app',
-			tags: ['Next.js', 'SCSS', 'Firebase'],
-			image: '',
-			url: '/'
-		},
-		{
-			title: 'PELA - Portfolio for English Language Assessment',
-			role: 'Designer, Developer',
-			description: 'LMS for LINC programs in Canada',
-			tags: ['Next.js', 'Tailwind CSS', 'Firebase'],
-			image: '',
-			url: '/'
-		},
+		// {
+		// 	title: 'Tabeyou',
+		// 	role: 'Designer, Developer',
+		// 	description: 'Meal planning crud app',
+		// 	tags: ['Next.js', 'SCSS', 'Firebase'],
+		// 	image: '',
+		// 	url: '/'
+		// },
+		// {
+		// 	title: 'PELA - Portfolio for English Language Assessment',
+		// 	role: 'Designer, Developer',
+		// 	description: 'LMS for LINC programs in Canada',
+		// 	tags: ['Next.js', 'Tailwind CSS', 'Firebase'],
+		// 	image: '',
+		// 	url: '/'
+		// },
 		{
 			title: 'Portfolio',
-			role: 'Sole developer',
+			role: 'Developer',
 			description: 'this portfolio site',
 			tags: ['SvelteKit', 'Tailwind CSS'],
-			image: '',
+			image: '/assets/images/hc.png',
 			url: '/'
 		}
 	];
