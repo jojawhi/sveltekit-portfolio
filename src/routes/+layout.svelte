@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import Header from './Header.svelte';
 	import Link from '$lib/common/Link.svelte';
 	import { nameStore } from '$lib/stores/name';
@@ -13,8 +14,10 @@
 <div class="app">
 	<Header />
 
-	<main>
+	<main in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
+		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
 		<slot />
+		<!-- </div> -->
 	</main>
 
 	<footer>

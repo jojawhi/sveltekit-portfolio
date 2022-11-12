@@ -1,12 +1,16 @@
+<script lang="ts">
+	import Text from '$lib/common/Text.svelte';
+</script>
+
 <svelte:head>
 	<title>About Josh</title>
 	<meta name="description" content="Information web and software developer Josh White" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<Text type="hero" content="This is Josh" />
 
-	<p>
+	<!-- <p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
 		following into your command line and following the prompts:
 	</p>
@@ -22,5 +26,5 @@
 	<p>
 		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
 		using it with JavaScript disabled!
-	</p>
+	</p> -->
 </div>

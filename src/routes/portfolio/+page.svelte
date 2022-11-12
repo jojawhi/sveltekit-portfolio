@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Text from '$lib/common/Text.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 
 	const projects = [
@@ -54,7 +55,7 @@
 </svelte:head>
 
 <div class="project-container flex-col">
-	<h1 class="text-white">Portfolio</h1>
+	<Text type="hero" content="Software Development and Graphic Design Projects" />
 	{#each projects as project, i}
 		<ProjectCard {project} key={i + 1} />
 	{/each}

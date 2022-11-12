@@ -18,6 +18,10 @@
 	<h3 class={textTypes[type]}>
 		{content}
 	</h3>
+{:else if type === 'hero'}
+	<h1 class={textTypes[type]}>
+		{content}
+	</h1>
 {:else}
 	<p class={textTypes[type]}>
 		{content}
