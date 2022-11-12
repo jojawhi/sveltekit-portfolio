@@ -1,4 +1,6 @@
 <script>
+	import Text from './../lib/common/Text.svelte';
+	import Name from '$lib/Name.svelte';
 	// import Counter from './Counter.svelte';
 	// import welcome from '$lib/images/svelte-welcome.webp';
 	// import welcome_fallback from '$lib/images/svelte-welcome.png';
@@ -12,16 +14,20 @@
 	/>
 </svelte:head>
 
-<section class="flex-col gap-4">
-	<h2>Frontend Developer</h2>
-	<p>Welcome to my playground!</p>
-	<p>
-		I use my personal site to experiment with new technologies and techniques that I learn, and I've
+<section class="flex flex-col gap-4">
+	<div class="flex-col h-screen text-center">
+		<Name />
+		<Text type="hero" content="Full Stack Developer" />
+	</div>
+	<Text type="heading" content="Welcome to my playground!" />
+	<Text
+		type="body"
+		content="I use my personal site to experiment with new technologies and techniques that I learn, and I've
 		turned this current version into a little game. Around the site, you will find triggers that
 		will transform the letters in my name and give you some insight into my personality. Think you
-		can find them all?
-	</p>
-	<p>Happy hunting!</p>
+		can find them all?"
+	/>
+	<Text type="subheading" content="Happy hunting!" />
 
 	<!-- <Counter /> -->
 </section>

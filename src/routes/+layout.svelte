@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Header from './Header.svelte';
-	import Name from '$lib/Name.svelte';
 	import Link from '$lib/common/Link.svelte';
 	import { nameStore } from '$lib/stores/name';
 	import '../app.css';
@@ -15,7 +14,6 @@
 	<Header />
 
 	<main>
-		<Name />
 		<slot />
 	</main>
 
