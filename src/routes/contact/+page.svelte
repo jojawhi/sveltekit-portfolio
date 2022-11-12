@@ -8,6 +8,14 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Contact Josh</title>
+	<meta
+		name="description"
+		content="Contact Josh White for web or software development service inquiries."
+	/>
+</svelte:head>
+
 <div class="container flex flex-col mx-auto">
 	<h1 class="text-white">Contact</h1>
 	<button

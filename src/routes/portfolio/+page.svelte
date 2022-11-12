@@ -45,6 +45,14 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Josh White's Portfolio</title>
+	<meta
+		name="description"
+		content="Josh White's portfolio of web and software development and graphic design projects"
+	/>
+</svelte:head>
+
 <div class="project-container flex-col">
 	<h1 class="text-white">Portfolio</h1>
 	{#each projects as project, i}

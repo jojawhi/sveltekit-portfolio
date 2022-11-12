@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>jojawhi</title>
+	<title>Josh White's Web Dev Portfolio</title>
 	<meta
 		name="description"
 		content="Josh White's full stack software developer portfolio, showcasing web development projects and experience with JavaScript, TypeScript, CSS, React.js, and Svelte."
