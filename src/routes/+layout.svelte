@@ -1,18 +1,25 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import Name from '$lib/Name.svelte';
 	import Header from './Header.svelte';
+	import Drawer from '$lib/Drawer.svelte';
 	import Link from '$lib/common/Link.svelte';
 	import { nameStore } from '$lib/stores/name';
 	import '../app.css';
 	import './styles.css';
 
+	let open = false;
+
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
+		open = true;
+		setTimeout(() => (open = false), 3000);
 	};
 </script>
 
-<div class="app">
+<div class="app relative overflow-hidden">
 	<Header />
+	<Name />
 
 	<main in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
@@ -31,6 +38,7 @@
 			/>
 		</p>
 	</footer>
+	<Drawer {open} />
 </div>
 
 <style>

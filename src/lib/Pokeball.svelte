@@ -23,6 +23,8 @@
 
 		activateLetter(2);
 	};
+
+	//to-do: add dark background-variant
 </script>
 
 <div style="--width:{width}" class="pokeball-container" on:mouseenter={onHover} on:click={onClick}>
@@ -208,7 +210,7 @@
 		top: 50%;
 		left: 50%;
 		background-color: transparent;
-		border: 1px solid #f0abfc;
+		border: 1.5px solid #6366f1;
 		border-radius: 1000px;
 		transform: translate(-50%, -50%);
 		opacity: 0;
@@ -223,7 +225,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background-color: transparent;
-		border: 1px solid #f0abfc;
+		border: 1.5px solid #6366f1;
 		border-radius: 50%;
 		opacity: 0;
 		z-index: 12;

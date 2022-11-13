@@ -6,6 +6,6 @@
 	export let id: number;
 </script>
 
-<div class="container justify-center align-center" transition:fade>
-	<img class={id === 7 ? 'max-h-40 px-4' : 'max-h-52'} {src} {alt} />
+<div class="container flex flex-col justify-start" transition:fade>
+	<img class={id === 7 ? 'max-h-40' : 'max-h-52'} {src} {alt} />
 </div>

@@ -16,7 +16,7 @@
 
 <section class="flex flex-col gap-4">
 	<div class="flex-col h-screen text-center">
-		<Name />
+		<!-- <Name /> -->
 		<Text type="hero" content="Full Stack Developer" />
 	</div>
 	<Text type="heading" content="Welcome to my playground!" />

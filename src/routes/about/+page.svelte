@@ -1,5 +1,13 @@
 <script lang="ts">
+	import Button from '$lib/common/Button.svelte';
 	import Text from '$lib/common/Text.svelte';
+	import Drawer from '$lib/Drawer.svelte';
+
+	let open = false;
+
+	// const onClick = () => {
+	// 	open = !open;
+	// }
 </script>
 
 <svelte:head>
@@ -7,7 +15,7 @@
 	<meta name="description" content="Information web and software developer Josh White" />
 </svelte:head>
 
-<div class="text-column">
+<div class="container text-column relative">
 	<Text type="hero" content="This is Josh" />
 
 	<!-- <p>
@@ -27,4 +35,7 @@
 		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
 		using it with JavaScript disabled!
 	</p> -->
+	<Drawer {open} />
+
+	<Button type="default" onClick={() => (open = !open)}>Open/Close</Button>
 </div>
