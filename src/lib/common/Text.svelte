@@ -6,7 +6,8 @@
 		hero: 'gradient-text font-extrabold text-5xl',
 		heading: 'font-extrabold text-indigo-400 text-3xl',
 		subheading: 'font-bold text-white text-xl mb-4',
-		body: 'text-white text-md mb-4'
+		body: 'text-white text-md mb-4',
+		validation: 'text-fuchsia-400 text-sm self-start'
 	};
 </script>
 

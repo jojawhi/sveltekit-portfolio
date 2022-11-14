@@ -12,8 +12,8 @@
 
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
-		open = true;
-		setTimeout(() => (open = false), 3000);
+		// open = true;
+		// setTimeout(() => (open = false), 3000);
 	};
 </script>
 

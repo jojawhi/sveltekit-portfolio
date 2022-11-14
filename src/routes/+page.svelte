@@ -1,4 +1,5 @@
 <script>
+	import Section from '$lib/Section.svelte';
 	import Text from './../lib/common/Text.svelte';
 	import Name from '$lib/Name.svelte';
 	// import Counter from './Counter.svelte';
@@ -19,6 +20,9 @@
 		<!-- <Name /> -->
 		<Text type="hero" content="Full Stack Developer" />
 	</div>
+</section>
+
+<Section id="basic-info">
 	<Text type="heading" content="Welcome to my playground!" />
 	<Text
 		type="body"
@@ -28,9 +32,13 @@
 		can find them all?"
 	/>
 	<Text type="subheading" content="Happy hunting!" />
-
-	<!-- <Counter /> -->
-</section>
+</Section>
+<Section id="portfolio">
+	<Text type="hero" content="Software Development and Graphic Design Projects" />
+</Section>
+<Section id="about">
+	<Text type="hero" content="This is Josh" />
+</Section>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap');
