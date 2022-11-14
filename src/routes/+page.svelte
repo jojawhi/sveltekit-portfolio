@@ -17,7 +17,7 @@
 </svelte:head>
 
 <section class="flex flex-col gap-4">
-	<div class="flex-col h-screen text-center">
+	<div class="flex-col text-center justify-between">
 		<!-- <Name /> -->
 		<Text type="hero" content="Full Stack Developer" />
 		<div class="container">
