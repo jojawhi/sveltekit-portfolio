@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
 	import Name from '$lib/Name.svelte';
 	import Header from './Header.svelte';
@@ -19,15 +20,16 @@
 
 <div class="app relative overflow-hidden">
 	<Header />
-	<Name />
-
-	<main in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}>
+	{#if $page.url.pathname != '/'}
+		<Name />
+	{/if}
+	<main class="h-screen">
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
 		<slot />
 		<!-- </div> -->
 	</main>
 
-	<footer>
+	<footer class="text-center">
 		<p>
 			Designed and developed by Josh White. &copy; Copyright 2022.
 			<Link

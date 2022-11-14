@@ -8,7 +8,7 @@
 			role: 'Technical Project Manager, Support Developer',
 			description: 'Hockey Canada website proof of concept',
 			tags: ['Next.js', 'Styled Components', 'Linear'],
-			image: '/assets/images/hc.png',
+			image: '/assets/images/projects/hc-gif.gif',
 			url: '/'
 		},
 		{
@@ -16,7 +16,7 @@
 			role: 'Developer',
 			description: 'folkwise',
 			tags: ['SvelteKit', 'SCSS', 'Markdown'],
-			image: '/assets/images/folkwise.png',
+			image: '/assets/images/projects/folkwise.png',
 			url: '/'
 		},
 		// {
@@ -40,7 +40,7 @@
 			role: 'Developer',
 			description: 'this portfolio site',
 			tags: ['SvelteKit', 'Tailwind CSS'],
-			image: '/assets/images/hc.png',
+			image: '/assets/images/projects/hc.png',
 			url: '/'
 		}
 	];

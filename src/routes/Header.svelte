@@ -16,13 +16,13 @@
 		</a>
 	</div> -->
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+	<nav class="pt-4">
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
+		</svg> -->
+		<ul class="flex gap-4">
 			<li class:active={$page.url.pathname === '/'} on:click={() => activateLetter(0)}>
-				<a href="/">Home</a>
+				<a href="/" class="">Home</a>
 			</li>
 			<li class:active={$page.url.pathname === '/portfolio'} on:click={() => activateLetter(1)}>
 				<a href="/portfolio">Portfolio</a>
@@ -40,9 +40,9 @@
 				<a href="/sverdle">Sverdle</a>
 			</li> -->
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+		</svg> -->
 	</nav>
 
 	<!-- <div class="corner">
@@ -77,21 +77,21 @@
 		object-fit: contain;
 	} */
 
-	nav {
+	/* nav {
 		display: flex;
 		justify-content: center;
 		--background: #fcfcfc;
-	}
+	} */
 
-	svg {
+	/* svg {
 		width: 2em;
 		height: 3em;
 		display: block;
-	}
+	} */
 
-	path {
+	/* path {
 		fill: var(--background);
-	}
+	} */
 
 	ul {
 		position: relative;
@@ -102,8 +102,8 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
-		background-size: contain;
+		/* background: var(--background);
+		background-size: contain; */
 	}
 
 	li {
@@ -112,7 +112,7 @@
 	}
 
 	li.active::before {
-		--size: 6px;
+		/* --size: 6px;
 		content: '';
 		width: 0;
 		height: 0;
@@ -120,11 +120,17 @@
 		top: 0;
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
+		border-top: var(--size) solid var(--color-theme-1); */
+		content: '';
+		width: 100%;
+		height: 4px;
+		position: absolute;
+		bottom: 35%;
+		background-image: linear-gradient(90deg, #4f46e5, #c026d3);
 	}
 
-	nav a {
-		display: flex;
+	li a {
+		/* display: flex;
 		height: 100%;
 		align-items: center;
 		padding: 0 0.5rem;
@@ -134,10 +140,20 @@
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		text-decoration: none;
-		transition: color 0.2s linear;
+		transition: color 0.2s linear; */
+		font-weight: 700;
+		font-size: 1.1rem;
+		background-image: linear-gradient(90deg, white, white);
+		background-clip: text;
+		color: transparent;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 300ms;
 	}
 
-	a:hover {
-		color: var(--color-theme-1);
+	li a:hover {
+		background-image: linear-gradient(90deg, #4f46e5, #c026d3);
+		background-clip: text;
+		color: transparent;
 	}
 </style>

@@ -16,17 +16,21 @@
 	/>
 </svelte:head>
 
-<section class="flex flex-col gap-4">
-	<div class="flex-col text-center justify-between">
-		<!-- <Name /> -->
+<Section id="hero">
+	<div class="flex flex-col text-center gap-6">
+		<Name />
 		<Text type="hero" content="Full Stack Developer" />
+		<Text
+			type="subheading"
+			content="I'll help you build clean and modern UIs, integrate 3rd-party APIs, and connect seamlessly to your backend data."
+		/>
 		<div class="container">
 			<HeroIcons />
 		</div>
 	</div>
-</section>
+</Section>
 
-<Section id="basic-info">
+<!-- <Section id="basic-info">
 	<Text type="heading" content="Welcome to my playground!" />
 	<Text
 		type="body"
@@ -42,19 +46,18 @@
 </Section>
 <Section id="about">
 	<Text type="hero" content="This is Josh" />
-</Section>
-
+</Section> -->
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Ubuntu:wght@300;400;500;700&display=swap');
 
-	section {
+	/* section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
 		color: #fcfcfc;
-	}
+	} */
 
 	/* h1 {
 		font-family: 'Gotham', sans-serif;
