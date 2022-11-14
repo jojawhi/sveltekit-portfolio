@@ -2,6 +2,7 @@
 	import Section from '$lib/Section.svelte';
 	import Text from './../lib/common/Text.svelte';
 	import Name from '$lib/Name.svelte';
+	import HeroIcons from '$lib/HeroIcons.svelte';
 	// import Counter from './Counter.svelte';
 	// import welcome from '$lib/images/svelte-welcome.webp';
 	// import welcome_fallback from '$lib/images/svelte-welcome.png';
@@ -19,6 +20,9 @@
 	<div class="flex-col h-screen text-center">
 		<!-- <Name /> -->
 		<Text type="hero" content="Full Stack Developer" />
+		<div class="container">
+			<HeroIcons />
+		</div>
 	</div>
 </section>
 

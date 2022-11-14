@@ -30,9 +30,9 @@
 			<li class:active={$page.url.pathname === '/about'} on:click={() => activateLetter(5)}>
 				<a href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname === '/blog'} on:click={() => activateLetter(3)}>
+			<!-- <li class:active={$page.url.pathname === '/blog'} on:click={() => activateLetter(3)}>
 				<a href="/blog">Blog</a>
-			</li>
+			</li> -->
 			<li class:active={$page.url.pathname === '/contact'} on:click={() => activateLetter(4)}>
 				<a href="/contact">Contact</a>
 			</li>
