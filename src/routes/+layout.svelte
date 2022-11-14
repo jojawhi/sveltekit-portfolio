@@ -23,7 +23,7 @@
 	{#if $page.url.pathname != '/'}
 		<Name />
 	{/if}
-	<main class="h-screen">
+	<main class="pt-12">
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
 		<slot />
 		<!-- </div> -->
