@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Section from '$lib/Section.svelte';
 	import { browser } from '$app/environment';
 	import { onMount, onDestroy } from 'svelte';
 	import clientConfig from '$lib/client/clientConfig';
@@ -150,73 +151,74 @@
 	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </svelte:head>
 
-<div class="container flex flex-col items-center">
-	<Text type="hero" content="Contact Josh" />
+<div class="container flex flex-col items-center justify-center mx-auto">
+	<Text type="pageTitle" content="Contact Josh" />
+	<Section id="contact">
+		<form
+			id="contact-form"
+			class="container w-full flex flex-col items-center justify-center"
+			method="POST"
+			on:submit|preventDefault={handleSubmit}
+		>
+			<div class="flex flex-col w-full items-center">
+				<label for="name">Name</label>
+				<input
+					bind:value={name}
+					type="text"
+					id="name"
+					placeholder="Name"
+					class="w-full p-4 my-2 rounded-md"
+					novalidate
+				/>
+				{#if errors.name}
+					<Text type="validation" content={errors.name} />
+				{/if}
+			</div>
+			<div class="flex flex-col w-full items-center">
+				<label for="email">Email</label>
+				<input
+					bind:value={email}
+					type="text"
+					id="email"
+					placeholder="Email"
+					class="w-full p-4 my-2 rounded-md"
+					novalidate
+				/>
+				{#if errors.email}
+					<Text type="validation" content={errors.email} />
+				{/if}
+			</div>
+			<div class="flex flex-col w-full items-center">
+				<label for="message">Message</label>
+				<textarea
+					bind:value={message}
+					name="message"
+					id="message"
+					rows="8"
+					placeholder="Type your message"
+					class="w-full p-4 my-2 rounded-md"
+					novalidate
+				/>
+				{#if errors.message}
+					<Text type="validation" content={errors.message} />
+				{/if}
+			</div>
 
-	<form
-		id="contact-form"
-		class="container w-1/2 flex flex-col items-center"
-		method="POST"
-		on:submit|preventDefault={handleSubmit}
-	>
-		<div class="flex flex-col w-full items-center">
-			<label for="name">Name</label>
-			<input
-				bind:value={name}
-				type="text"
-				id="name"
-				placeholder="Name"
-				class="w-full p-4 my-2 rounded-md"
-				novalidate
+			<div
+				id="hcaptcha"
+				class="h-captcha"
+				data-sitekey={clientConfig.hCaptchaSiteKeyLocal}
+				data-size="invisible"
+				data-theme="dark"
 			/>
-			{#if errors.name}
-				<Text type="validation" content={errors.name} />
-			{/if}
-		</div>
-		<div class="flex flex-col w-full items-center">
-			<label for="email">Email</label>
-			<input
-				bind:value={email}
-				type="text"
-				id="email"
-				placeholder="Email"
-				class="w-full p-4 my-2 rounded-md"
-				novalidate
-			/>
-			{#if errors.email}
-				<Text type="validation" content={errors.email} />
-			{/if}
-		</div>
-		<div class="flex flex-col w-full items-center">
-			<label for="message">Message</label>
-			<textarea
-				bind:value={message}
-				name="message"
-				id="message"
-				rows="8"
-				placeholder="Type your message"
-				class="w-full p-4 my-2 rounded-md"
-				novalidate
-			/>
-			{#if errors.message}
-				<Text type="validation" content={errors.message} />
-			{/if}
-		</div>
 
-		<div
-			id="hcaptcha"
-			class="h-captcha"
-			data-sitekey={clientConfig.hCaptchaSiteKeyLocal}
-			data-size="invisible"
-			data-theme="dark"
-		/>
+			<Button buttonType="contact" type="submit" onClick={() => console.log('send')}>Send</Button>
+		</form>
 
-		<Button buttonType="contact" type="submit" onClick={() => console.log('send')}>Send</Button>
-	</form>
+		<Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button>
 
-	<Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button>
-
-	<Button buttonType="white" onClick={() => console.log('clicked')}>
-		<Pokeball width="24rem" />
-	</Button>
+		<Button buttonType="white" onClick={() => console.log('clicked')}>
+			<Pokeball width="24rem" />
+		</Button>
+	</Section>
 </div>

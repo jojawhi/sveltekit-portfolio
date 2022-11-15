@@ -16,19 +16,17 @@
 	/>
 </svelte:head>
 
-<Section id="hero">
-	<div class="flex flex-col text-center gap-6">
-		<Name />
-		<Text type="hero" content="Full Stack Developer" />
-		<Text
-			type="subheading"
-			content="I'll help you build clean and modern UIs, integrate 3rd-party APIs, and connect seamlessly to your backend data."
-		/>
-		<div class="container">
-			<HeroIcons />
-		</div>
+<div class="flex flex-col text-center gap-6">
+	<Name />
+	<Text type="hero" content="Full Stack Developer" />
+	<Text
+		type="subheading"
+		content="I'll help you build clean and modern UIs, integrate 3rd-party APIs, and connect seamlessly to your backend data."
+	/>
+	<div class="container">
+		<HeroIcons />
 	</div>
-</Section>
+</div>
 
 <!-- <Section id="basic-info">
 	<Text type="heading" content="Welcome to my playground!" />

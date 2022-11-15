@@ -3,10 +3,11 @@
 	export let content: string;
 
 	const textTypes: { [key: string]: string } = {
-		hero: 'gradient-text font-extrabold text-5xl',
+		hero: 'gradient-text font-extrabold text-5xl mt-16',
+		pageTitle: 'gradient-text font-extrabold text-4xl leading-tight mt-28 text-center',
 		heading: 'font-extrabold text-indigo-400 text-3xl',
 		subheading: 'font-bold text-white text-xl mb-4',
-		body: 'text-white text-md mb-4',
+		body: 'text-white text-base mb-4',
 		validation: 'text-fuchsia-400 text-sm self-start'
 	};
 </script>
@@ -19,11 +20,11 @@
 	<h3 class={textTypes[type]}>
 		{content}
 	</h3>
-{:else if type === 'hero'}
+{:else if type === 'hero' || 'pageTitle'}
 	<h1 class={textTypes[type]}>
 		{content}
 	</h1>
-{:else}
+{:else if type === 'body'}
 	<p class={textTypes[type]}>
 		{content}
 	</p>

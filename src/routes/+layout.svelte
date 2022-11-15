@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { fade } from 'svelte/transition';
-	import Name from '$lib/Name.svelte';
 	import Header from './Header.svelte';
 	import Drawer from '$lib/Drawer.svelte';
 	import Link from '$lib/common/Link.svelte';
@@ -10,6 +8,10 @@
 	import './styles.css';
 
 	let open = false;
+
+	const drawerClick = () => {
+		open = !open;
+	};
 
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
@@ -21,7 +23,7 @@
 <div class="app relative overflow-hidden">
 	<Header />
 	{#if $page.url.pathname != '/'}
-		<Name />
+		<Drawer {open} onClick={drawerClick} />
 	{/if}
 	<main class="pt-12">
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
@@ -40,7 +42,6 @@
 			/>
 		</p>
 	</footer>
-	<Drawer {open} />
 </div>
 
 <style>

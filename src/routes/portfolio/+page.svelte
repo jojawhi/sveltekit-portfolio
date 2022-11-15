@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Text from '$lib/common/Text.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
+	import Section from '$lib/Section.svelte';
 
 	const projects = [
 		{
@@ -55,9 +56,11 @@
 </svelte:head>
 
 <div class="project-container flex-col">
-	<Text type="hero" content="Software Development and Graphic Design Projects" />
+	<Text type="pageTitle" content="Software Development and Graphic Design Projects" />
 	{#each projects as project, i}
-		<ProjectCard {project} key={i + 1} />
+		<Section id={`portfolio-${i}`}>
+			<ProjectCard {project} key={i + 1} />
+		</Section>
 	{/each}
 </div>
 

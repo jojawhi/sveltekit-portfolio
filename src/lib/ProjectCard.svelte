@@ -19,10 +19,10 @@
 
 <div
 	class={key % 2 === 0
-		? 'flex flex-row-reverse justify-between my-12 px-12 py-8 rounded-lg bg-gradient-to-r from-zinc-800 to-zinc-700'
-		: 'flex justify-between my-12 px-12 py-8 rounded-lg bg-gradient-to-r from-zinc-700 to-zinc-800'}
+		? 'flex flex-row-reverse justify-between gap-4 my-4 p-8'
+		: 'flex justify-between gap-4 my-4 p-8'}
 >
-	<div class="flex flex-col justify-between">
+	<div class="flex flex-col max-w-min justify-between">
 		<div class="flex flex-col">
 			<Text type="heading" content={project.title} />
 			<Text type="subheading" content={project.role} />
@@ -35,7 +35,7 @@
 		</div>
 		<Link type="project" href={project.url} anchorText="Go to Project" />
 	</div>
-	<div class="image-wrapper w-2/5 align-self-end">
-		<img class="rounded-lg" src={project.image} alt="folkwise website screenshot" />
+	<div class="image-wrapper max-w-max align-self-end">
+		<img class="h-full w-full rounded-lg" src={project.image} alt="folkwise website screenshot" />
 	</div>
 </div>
