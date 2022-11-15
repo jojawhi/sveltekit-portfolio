@@ -1,8 +1,8 @@
 <script>
-	import Section from '$lib/Section.svelte';
 	import Text from './../lib/common/Text.svelte';
 	import Name from '$lib/Name.svelte';
 	import HeroIcons from '$lib/HeroIcons.svelte';
+	import SocialIcons from '$lib/SocialIcons.svelte';
 	// import Counter from './Counter.svelte';
 	// import welcome from '$lib/images/svelte-welcome.webp';
 	// import welcome_fallback from '$lib/images/svelte-welcome.png';
@@ -23,9 +23,8 @@
 		type="subheading"
 		content="I'll help you build clean and modern UIs, integrate 3rd-party APIs, and connect seamlessly to your backend data."
 	/>
-	<div class="container">
-		<HeroIcons />
-	</div>
+	<HeroIcons />
+	<SocialIcons />
 </div>
 
 <!-- <Section id="basic-info">

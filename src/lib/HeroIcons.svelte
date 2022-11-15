@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TechIcon from './TechIcon.svelte';
+	import Icon from './Icon.svelte';
 
 	const icons = [
 		{
@@ -46,9 +46,9 @@
 </script>
 
 <div
-	class="container grid grid-cols-4 gap-10 py-8 max-w-fit rounded-2xl mt-12 justify-center items-center"
+	class="container grid grid-cols-4 gap-10 p-8 max-w-fit rounded-2xl mt-12 justify-center items-center"
 >
 	{#each icons as icon}
-		<TechIcon src={icon.src} alt={icon.alt} />
+		<Icon type="tech" src={icon.src} alt={icon.alt} />
 	{/each}
 </div>

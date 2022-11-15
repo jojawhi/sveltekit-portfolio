@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Header from './Header.svelte';
-	import Drawer from '$lib/Drawer.svelte';
-	import Link from '$lib/common/Link.svelte';
 	import { nameStore } from '$lib/stores/name';
 	import { drawerStore } from '$lib/stores/drawer';
+	import Header from './Header.svelte';
+	import Drawer from '$lib/Drawer.svelte';
+	// import Link from '$lib/common/Link.svelte';
+	import Github from '$lib/Github.svelte';
+	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 	import '../app.css';
 	import './styles.css';
 
@@ -14,8 +16,7 @@
 
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
-		// open = true;
-		// setTimeout(() => (open = false), 3000);
+		openAndCloseAfterTimeout();
 	};
 </script>
 
@@ -30,16 +31,25 @@
 		<!-- </div> -->
 	</main>
 
-	<footer class="text-center">
+	<footer class="flex text-center">
 		<p>
 			Designed and developed by Josh White. &copy; Copyright 2022.
-			<Link
+			<!-- <Link
 				type="default"
 				href="https://github.com/jojawhi"
 				anchorText="GitHub"
 				on:click={() => activateLetter(5)}
-			/>
+			/> -->
 		</p>
+		<a
+			href="https://github.com/jojawhi/sveltekit-portfolio"
+			target="_blank"
+			rel="noopener"
+			class="github w-6"
+			on:click={() => activateLetter(0)}
+		>
+			<Github />
+		</a>
 	</footer>
 </div>
 
@@ -68,6 +78,26 @@
 		align-items: center;
 		padding: 12px;
 		color: #fcfcfc;
+	}
+
+	.github {
+		fill: url(#GithubGradient1);
+		transition: all 300ms;
+	}
+
+	.github:hover {
+		fill: #14b8a6; /*url(#GithubGradient2)*/
+		animation: spin 500ms ease forwards;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg) scale(1);
+		}
+
+		to {
+			transform: rotate(360deg) scale(1.1);
+		}
 	}
 
 	@media (min-width: 480px) {

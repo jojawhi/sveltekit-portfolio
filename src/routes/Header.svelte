@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { nameStore } from '$lib/stores/name';
+	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
+		openAndCloseAfterTimeout();
 	};
 	// import logo from '$lib/images/svelte-logo.svg';
 	// import github from '$lib/images/github.svg';
@@ -21,7 +23,7 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg> -->
 		<ul class="flex gap-4">
-			<li class:active={$page.url.pathname === '/'} on:click={() => activateLetter(0)}>
+			<li class:active={$page.url.pathname === '/'}>
 				<a href="/" class="">Home</a>
 			</li>
 			<li class:active={$page.url.pathname === '/portfolio'} on:click={() => activateLetter(1)}>
