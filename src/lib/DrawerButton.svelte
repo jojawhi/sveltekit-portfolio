@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Button from './common/Button.svelte';
+	import { drawerStore } from './stores/drawer';
 
-	export let open: boolean;
+	// export let open: boolean;
 	export let onClick: () => void;
 </script>
 
@@ -28,7 +29,7 @@
   "
 	>
 		<div class="flex justify-center items-center w-full h-full bg-[#1b1b1d] rounded-full">
-			{#if open}
+			{#if $drawerStore}
 				<img class="w-3/4" src="/assets/images/icons/angle-up.svg" alt="angle up" />
 			{:else}
 				<img class="w-3/4" src="/assets/images/icons/angle-down.svg" alt="angle down" />

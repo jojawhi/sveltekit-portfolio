@@ -4,13 +4,12 @@
 	import Drawer from '$lib/Drawer.svelte';
 	import Link from '$lib/common/Link.svelte';
 	import { nameStore } from '$lib/stores/name';
+	import { drawerStore } from '$lib/stores/drawer';
 	import '../app.css';
 	import './styles.css';
 
-	let open = false;
-
 	const drawerClick = () => {
-		open = !open;
+		drawerStore.set(!$drawerStore);
 	};
 
 	const activateLetter = (index: number) => {
@@ -23,7 +22,7 @@
 <div class="app relative overflow-hidden">
 	<Header />
 	{#if $page.url.pathname != '/'}
-		<Drawer {open} onClick={drawerClick} />
+		<Drawer onClick={drawerClick} />
 	{/if}
 	<main class="pt-12">
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->

@@ -2,9 +2,8 @@
 	import Section from '$lib/Section.svelte';
 	import Button from '$lib/common/Button.svelte';
 	import Text from '$lib/common/Text.svelte';
-	import Drawer from '$lib/Drawer.svelte';
 
-	// let open = false;
+	let open = false;
 
 	// const onClick = () => {
 	// 	open = !open;
@@ -37,6 +36,6 @@
 		using it with JavaScript disabled!
 	</p> -->
 
-		<!-- <Button type="default" onClick={() => (open = !open)}>Open/Close</Button> -->
+		<Button type="default" onClick={() => (open = !open)}>Open/Close</Button>
 	</Section>
 </div>

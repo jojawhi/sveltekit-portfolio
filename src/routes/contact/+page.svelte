@@ -7,6 +7,7 @@
 	import Pokeball from './../../lib/Pokeball.svelte';
 	import Button from '$lib/common/Button.svelte';
 	import { nameStore } from '$lib/stores/name';
+	import { drawerStore, openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	/** @typedef {{
     execute(hcaptchaWidgetID?: string , opts?: { async: boolean }): Promise<HCaptchaExecuteResponse> | null;
@@ -139,6 +140,7 @@
 
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
+		openAndCloseAfterTimeout();
 	};
 </script>
 

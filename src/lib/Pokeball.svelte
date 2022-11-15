@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { nameStore } from './stores/name';
+	import { openAndCloseAfterTimeout } from './stores/drawer';
 
 	export let width: string = `${12}rem`;
 
 	const activateLetter = (index: number) => {
 		$nameStore[index].active = true;
+		openAndCloseAfterTimeout();
 	};
 
 	let hover: boolean = false;
