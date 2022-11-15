@@ -10,5 +10,5 @@ export const openAndCloseAfterTimeout = () => {
 	drawerStore.set(true);
 	setTimeout(() => {
 		drawerStore.set(false);
-	}, 3000);
+	}, 1500);
 };
