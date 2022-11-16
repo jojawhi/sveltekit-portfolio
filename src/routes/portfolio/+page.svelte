@@ -5,6 +5,7 @@
 
 	const projects = [
 		{
+			type: 'web',
 			title: 'Hockey Canada',
 			role: 'Technical Project Manager, Support Developer',
 			description: 'Hockey Canada website proof of concept',
@@ -13,6 +14,7 @@
 			url: '/'
 		},
 		{
+			type: 'web',
 			title: 'Folkwise.io',
 			role: 'Developer, Graphic Designer',
 			description: 'folkwise',
@@ -21,6 +23,7 @@
 			url: '/'
 		},
 		{
+			type: 'web',
 			title: 'Tabeyou',
 			role: 'Designer, Sole Developer',
 			description:
@@ -30,6 +33,7 @@
 			url: '/'
 		},
 		{
+			type: 'graphic',
 			title: 'Nanaimo Ultimate Association',
 			role: 'Graphic Designer',
 			description:
@@ -46,6 +50,7 @@
 		// 	url: '/'
 		// },
 		{
+			type: 'web',
 			title: 'Portfolio',
 			role: 'Developer',
 			description: 'this portfolio site',
@@ -67,7 +72,7 @@
 <div class="project-container flex-col">
 	<Text type="pageTitle" content="Software Development and Graphic Design Projects" />
 	{#each projects as project, i}
-		<Section id={`portfolio-${i}`}>
+		<Section id={`portfolio-${i}`} projectType={project.type}>
 			<ProjectCard {project} key={i + 1} />
 		</Section>
 	{/each}

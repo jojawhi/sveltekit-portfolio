@@ -4,6 +4,7 @@
 	import Tag from './Tag.svelte';
 
 	interface Project {
+		type: string;
 		title: string;
 		role: string;
 		description: string;
@@ -19,8 +20,8 @@
 
 <div
 	class={key % 2 === 0
-		? 'left flex flex-row-reverse justify-between gap-4 my-4 p-4'
-		: 'right flex justify-between gap-4 my-4 p-4'}
+		? 'left flex flex-row-reverse justify-between gap-8 my-4 p-4'
+		: 'right flex justify-between gap-8 my-4 p-4'}
 >
 	<div class="flex flex-col w-1/2 max-w-max justify-between">
 		<div class="flex flex-col">

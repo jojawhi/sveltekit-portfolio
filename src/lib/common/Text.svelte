@@ -5,7 +5,7 @@
 	const textTypes: { [key: string]: string } = {
 		hero: 'gradient-text font-extrabold text-5xl mt-16',
 		pageTitle: 'gradient-text font-extrabold text-4xl leading-tight mt-28 text-center',
-		heading: 'font-extrabold text-indigo-400 text-3xl',
+		heading: 'font-extrabold text-indigo-300 text-3xl',
 		subheading: 'font-bold text-white text-xl mb-4',
 		body: 'text-left text-white text-base mb-4',
 		validation: 'text-fuchsia-400 text-sm self-start'
