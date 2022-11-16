@@ -6,7 +6,7 @@
 	const linkTypes: { [key: string]: string } = {
 		default: 'text-red-500',
 		project:
-			'font-extrabold text-[#1b1b1d] text-center px-12 py-4 rounded-full transition-all duration-300 bg-gradient-to-r to-teal-500 via-fuchsia-400 from-indigo-400 bg-size-200 bg-pos-0 hover:bg-pos-100 hover:scale-105'
+			'font-extrabold text-[#1b1b1d] text-center px-12 py-4 rounded-full transition-all duration-300 bg-gradient-to-r to-teal-500 via-fuchsia-500 from-indigo-500 bg-size-200 bg-pos-0 hover:bg-pos-100 hover:scale-105'
 	};
 </script>
 

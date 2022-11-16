@@ -9,7 +9,7 @@
 		description: string;
 		tags: string[];
 		image: string;
-		url: string;
+		url?: string;
 	}
 
 	export let project: Project;
@@ -19,8 +19,8 @@
 
 <div
 	class={key % 2 === 0
-		? 'flex flex-row-reverse justify-between gap-4 my-4 p-4'
-		: 'flex justify-between gap-4 my-4 p-4'}
+		? 'left flex flex-row-reverse justify-between gap-4 my-4 p-4'
+		: 'right flex justify-between gap-4 my-4 p-4'}
 >
 	<div class="flex flex-col w-1/2 max-w-max justify-between">
 		<div class="flex flex-col">
@@ -33,9 +33,27 @@
 				<Tag {tag} />
 			{/each}
 		</div>
-		<Link type="project" href={project.url} anchorText="Go to Project" />
+		{#if project.url}
+			<Link type="project" href={project.url} anchorText="Go to Project" />
+		{/if}
 	</div>
 	<div class="image-wrapper max-w-[50%] max-h-min align-self-end">
 		<img class="h-full w-full rounded-lg" src={project.image} alt="folkwise website screenshot" />
 	</div>
 </div>
+
+<style>
+	/* Uncomment the below styles for the perspective skew on project card images */
+
+	/* .image-wrapper {
+		perspective: 1000px;
+	}
+
+	.right img {
+		transform: rotateY(140deg);
+	}
+
+	.left img {
+		transform: rotateY(40deg);
+	} */
+</style>

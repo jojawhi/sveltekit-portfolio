@@ -33,9 +33,8 @@
 			role: 'Graphic Designer',
 			description:
 				'Logo, branding, seasonal graphics, and jersey design for local ultimate frisbee association.',
-			tags: ['Next.js', 'Tailwind CSS', 'Firebase'],
-			image: '/assets/images/projects/logo_full_dark_text.png',
-			url: '/'
+			tags: ['Illustrator'],
+			image: '/assets/images/projects/nua_case.png'
 		},
 		// {
 		// 	title: 'PELA - Portfolio for English Language Assessment',
