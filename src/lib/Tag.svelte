@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="tag rounded-lg px-4 py-2 w-min transition-all duration-300 bg-gradient-to-r to-fuchsia-500 from-indigo-500"
+	class="tag rounded-full px-4 py-2 w-min transition-all duration-300 bg-gradient-to-r to-fuchsia-500 from-indigo-500"
 >
 	<p class="font-bold text-white whitespace-nowrap">{tag}</p>
 </div>

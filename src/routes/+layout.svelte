@@ -31,7 +31,7 @@
 		<!-- </div> -->
 	</main>
 
-	<footer class="flex text-center">
+	<footer class="flex gap-4 w-full justify-center items-center p-6 text-white">
 		<p>
 			Designed and developed by Josh White. &copy; Copyright 2022.
 			<!-- <Link
@@ -71,14 +71,14 @@
 		box-sizing: border-box;
 	}
 
-	footer {
+	/* footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
 		color: #fcfcfc;
-	}
+	} */
 
 	.github {
 		fill: url(#GithubGradient1);
@@ -101,8 +101,8 @@
 	}
 
 	@media (min-width: 480px) {
-		footer {
+		/* footer {
 			padding: 12px 0;
-		}
+		} */
 	}
 </style>

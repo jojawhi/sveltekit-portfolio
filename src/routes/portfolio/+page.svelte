@@ -14,23 +14,32 @@
 		},
 		{
 			title: 'Folkwise.io',
-			role: 'Developer',
+			role: 'Developer, Graphic Designer',
 			description: 'folkwise',
-			tags: ['SvelteKit', 'SCSS', 'Markdown'],
+			tags: ['SvelteKit', 'SCSS', 'Markdown', 'Sendgrid API', 'hCaptcha API'],
 			image: '/assets/images/projects/folkwise.png',
 			url: '/'
 		},
-		// {
-		// 	title: 'Tabeyou',
-		// 	role: 'Designer, Developer',
-		// 	description: 'Meal planning crud app',
-		// 	tags: ['Next.js', 'SCSS', 'Firebase'],
-		// 	image: '',
-		// 	url: '/'
-		// },
+		{
+			title: 'Tabeyou',
+			role: 'Owner, Sole Developer',
+			description: 'Meal planning crud app',
+			tags: ['Next.js', 'SCSS', 'Firebase'],
+			image: '/assets/images/projects/hc.png',
+			url: '/'
+		},
+		{
+			title: 'Nanaimo Ultimate Association',
+			role: 'Graphic Designer',
+			description:
+				'Logo, branding, seasonal graphics, and jersey design for local ultimate frisbee association.',
+			tags: ['Next.js', 'Tailwind CSS', 'Firebase'],
+			image: '/assets/images/projects/logo_full_dark_text.png',
+			url: '/'
+		},
 		// {
 		// 	title: 'PELA - Portfolio for English Language Assessment',
-		// 	role: 'Designer, Developer',
+		// 	role: 'Owner, Sole Developer',
 		// 	description: 'LMS for LINC programs in Canada',
 		// 	tags: ['Next.js', 'Tailwind CSS', 'Firebase'],
 		// 	image: '',
@@ -40,7 +49,7 @@
 			title: 'Portfolio',
 			role: 'Developer',
 			description: 'this portfolio site',
-			tags: ['SvelteKit', 'Tailwind CSS'],
+			tags: ['SvelteKit', 'Tailwind CSS', 'Illustrator', 'Sendgrid API', 'hCaptcha API'],
 			image: '/assets/images/projects/hc.png',
 			url: '/'
 		}
