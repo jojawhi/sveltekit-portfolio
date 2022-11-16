@@ -22,8 +22,9 @@
 		},
 		{
 			title: 'Tabeyou',
-			role: 'Owner, Sole Developer',
-			description: 'Meal planning crud app',
+			role: 'Designer, Sole Developer',
+			description:
+				'This web app was born out of my love of cooking but also my complete lack of memory of what I know how to cook when it is time to make the weekly shopping list. Mostly a simple CRUD app with some custom scheduling features and hopefully OCR integration in the future.',
 			tags: ['Next.js', 'SCSS', 'Firebase'],
 			image: '/assets/images/projects/hc.png',
 			url: '/'
@@ -48,7 +49,7 @@
 			title: 'Portfolio',
 			role: 'Developer',
 			description: 'this portfolio site',
-			tags: ['SvelteKit', 'Tailwind CSS', 'Illustrator', 'Sendgrid API', 'hCaptcha API'],
+			tags: ['SvelteKit', 'CSS', 'Tailwind CSS', 'Sendgrid API', 'hCaptcha API', 'Illustrator'],
 			image: '/assets/images/projects/hc.png',
 			url: '/'
 		}
