@@ -81,11 +81,11 @@ const sendEmail = async (formObject: Record<string, string>) => {
 		from: 'contact@jojawhi.com',
 		subject: 'Thank you for your message!',
 		text: `
-    Thank you so much for contacting Folkwise. We've received your message, and we will get back to you as soon as we can.
+    Thank you so much for contacting me. I've received your message and will get back to you as soon as I can.
 
     Regards,
 
-    The Folkwise team
+    Josh
     `
 	};
 
