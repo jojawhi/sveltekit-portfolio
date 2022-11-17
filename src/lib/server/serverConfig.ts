@@ -17,4 +17,12 @@ const serverConfig = {
 	hCaptchaSecretLocal: process.env.HCAPTCHA_SECRET_LOCAL
 };
 
+// Local testing
+// const serverConfig = {
+// 	sendgridSecret: SENDGRID_SECRET,
+// 	sendgridSenderEmail: SENDGRID_SENDER_EMAIL,
+// 	hCaptchaSecret: HCAPTCHA_SECRET,
+// 	hCaptchaSecretLocal: HCAPTCHA_SECRET_LOCAL
+// };
+
 export default serverConfig;
