@@ -14,7 +14,8 @@ const config = {
 
 	kit: {
 		adapter: adapter()
-	}
+	},
+	outDir: 'public'
 };
 
 export default config;
