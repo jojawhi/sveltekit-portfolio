@@ -22,15 +22,15 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
 		};
 
 		//Prod values
-		// const secret: string = serverConfig.hCaptchaSecret as string;
-		// const siteKey: string = clientConfig.hCaptchaSiteKey;
-		// const hCaptchaBody = new URLSearchParams({ response: hCaptchaClientResponse, secret, siteKey });
+		const secret: string = serverConfig.hCaptchaSecret as string;
+		const siteKey: string = clientConfig.hCaptchaSiteKey;
+		const hCaptchaBody = new URLSearchParams({ response: hCaptchaClientResponse, secret, siteKey });
 
 		//Test values
-		const secret: string = serverConfig.hCaptchaSecretLocal as string;
-		console.log(`hCaptcha secret: ${secret}`);
-		const siteKey: string = clientConfig.hCaptchaSiteKeyLocal;
-		const hCaptchaBody = new URLSearchParams({ response: hCaptchaClientResponse, secret, siteKey });
+		// const secret: string = serverConfig.hCaptchaSecretLocal as string;
+		// console.log(`hCaptcha secret: ${secret}`);
+		// const siteKey: string = clientConfig.hCaptchaSiteKeyLocal;
+		// const hCaptchaBody = new URLSearchParams({ response: hCaptchaClientResponse, secret, siteKey });
 
 		console.log('Request sent');
 

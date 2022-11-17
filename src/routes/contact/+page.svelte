@@ -4,7 +4,6 @@
 	import { onMount, onDestroy } from 'svelte';
 	import clientConfig from '$lib/client/clientConfig';
 	import Text from '$lib/common/Text.svelte';
-	import Pokeball from './../../lib/Pokeball.svelte';
 	import Button from '$lib/common/Button.svelte';
 	import { nameStore } from '$lib/stores/name';
 	import { drawerStore, openAndCloseAfterTimeout } from '$lib/stores/drawer';
@@ -37,9 +36,9 @@
 		}
 	});
 
-	let name = 'test';
-	let email = 'test@test.com';
-	let message = 'testtesttest';
+	let name = '';
+	let email = '';
+	let message = '';
 
 	let errors = {
 		name: '',
@@ -126,6 +125,7 @@
 				});
 
 				clearFormFields();
+				activateLetter(6);
 
 				// if (onClick) {
 				// 	onClick();
@@ -163,7 +163,7 @@
 			on:submit|preventDefault={handleSubmit}
 		>
 			<div class="flex flex-col w-full items-center">
-				<label for="name">Name</label>
+				<label for="name" class="text-white text-left w-full">Name</label>
 				<input
 					bind:value={name}
 					type="text"
@@ -177,7 +177,7 @@
 				{/if}
 			</div>
 			<div class="flex flex-col w-full items-center">
-				<label for="email">Email</label>
+				<label for="email" class="text-white text-left w-full">Email</label>
 				<input
 					bind:value={email}
 					type="text"
@@ -191,7 +191,7 @@
 				{/if}
 			</div>
 			<div class="flex flex-col w-full items-center">
-				<label for="message">Message</label>
+				<label for="message" class="text-white text-left w-full">Message</label>
 				<textarea
 					bind:value={message}
 					name="message"
@@ -209,7 +209,7 @@
 			<div
 				id="hcaptcha"
 				class="h-captcha"
-				data-sitekey={clientConfig.hCaptchaSiteKeyLocal}
+				data-sitekey={clientConfig.hCaptchaSiteKey}
 				data-size="invisible"
 				data-theme="dark"
 			/>
@@ -217,10 +217,6 @@
 			<Button buttonType="contact" type="submit" onClick={() => console.log('send')}>Send</Button>
 		</form>
 
-		<Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button>
-
-		<Button buttonType="white" onClick={() => console.log('clicked')}>
-			<Pokeball width="24rem" />
-		</Button>
+		<!-- <Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button> -->
 	</Section>
 </div>
