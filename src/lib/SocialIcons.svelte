@@ -43,7 +43,7 @@
 
 	.github:hover {
 		fill: #14b8a6; /*url(#GithubGradient2)*/
-		animation: spin 500ms ease forwards;
+		animation: rattle 1000ms ease forwards;
 	}
 
 	.linkedin {
@@ -54,7 +54,7 @@
 	.linkedin:hover {
 		fill: #14b8a6; /*url(#LinkedinGradient2)*/
 		/* transform: scale(1.1); */
-		animation: spin 500ms ease forwards;
+		animation: rattle 1000ms ease-in-out forwards;
 	}
 
 	@keyframes spin {
@@ -64,6 +64,33 @@
 
 		to {
 			transform: rotate(360deg) scale(1.1);
+		}
+	}
+
+	@keyframes rattle {
+		0% {
+			transform: rotate(0deg);
+		}
+		40% {
+			transform: rotate(50deg);
+		}
+		50% {
+			transform: rotate(50deg);
+		}
+		70% {
+			transform: rotate(-50deg);
+		}
+		77.5% {
+			transform: rotate(40deg);
+		}
+		85% {
+			transform: rotate(-40deg);
+		}
+		/* 92.5% {
+			transform: rotate(20deg);
+		} */
+		100% {
+			transform: rotate(0deg);
 		}
 	}
 </style>
