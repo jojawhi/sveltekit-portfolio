@@ -4,7 +4,6 @@
 	import { onMount, onDestroy } from 'svelte';
 	import clientConfig from '$lib/client/clientConfig';
 	import Text from '$lib/common/Text.svelte';
-	import Pokeball from './../../lib/Pokeball.svelte';
 	import Button from '$lib/common/Button.svelte';
 	import { nameStore } from '$lib/stores/name';
 	import { drawerStore, openAndCloseAfterTimeout } from '$lib/stores/drawer';
@@ -217,10 +216,6 @@
 			<Button buttonType="contact" type="submit" onClick={() => console.log('send')}>Send</Button>
 		</form>
 
-		<Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button>
-
-		<Button buttonType="white" onClick={() => console.log('clicked')}>
-			<Pokeball width="24rem" />
-		</Button>
+		<!-- <Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button> -->
 	</Section>
 </div>

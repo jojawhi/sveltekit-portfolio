@@ -154,8 +154,25 @@
 	}
 
 	li a:hover {
-		background-image: linear-gradient(90deg, #4f46e5, #c026d3);
+		/* background-image: linear-gradient(90deg, #4f46e5, #c026d3);
 		background-clip: text;
-		color: transparent;
+		color: transparent; */
+		color: #14b8a6;
+	}
+
+	li a::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		bottom: 35%;
+		background-image: linear-gradient(90deg, #4f46e5, #c026d3);
+		transform: scaleX(0);
+		transition: all 150ms;
+	}
+
+	li a:hover::after {
+		transform: scaleX(1);
 	}
 </style>

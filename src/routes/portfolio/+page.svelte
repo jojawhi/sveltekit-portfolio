@@ -9,7 +9,7 @@
 			title: 'Hockey Canada',
 			role: 'Technical Project Manager, Support Developer',
 			description: 'Hockey Canada website proof of concept',
-			tags: ['Next.js', 'Styled Components', 'Linear'],
+			tags: ['Next.js', 'Styled Components', 'Vercel', 'Linear'],
 			image: '/assets/images/projects/hc-gif.gif',
 			url: '/'
 		},
@@ -17,8 +17,9 @@
 			type: 'web',
 			title: 'Folkwise.io',
 			role: 'Developer, Graphic Designer',
-			description: 'folkwise',
-			tags: ['SvelteKit', 'SCSS', 'Markdown', 'Sendgrid API', 'hCaptcha API'],
+			description:
+				'A Markdown blog built with SvelteKit. I created graphics and branding, redesigned the UI, and integrated APIs for secure contact form.',
+			tags: ['SvelteKit', 'SCSS', 'Markdown', 'Sendgrid API', 'hCaptcha API', 'Vercel'],
 			image: '/assets/images/projects/folkwise.png',
 			url: '/'
 		},
@@ -33,6 +34,15 @@
 			url: '/'
 		},
 		{
+			type: 'web',
+			title: 'Portfolio',
+			role: 'Developer',
+			description: 'this portfolio site',
+			tags: ['SvelteKit', 'CSS', 'Tailwind CSS', 'Sendgrid API', 'hCaptcha API', 'Illustrator'],
+			image: '/assets/images/projects/hc.png',
+			url: '/'
+		},
+		{
 			type: 'graphic',
 			title: 'Nanaimo Ultimate Association',
 			role: 'Graphic Designer',
@@ -40,7 +50,7 @@
 				'Logo, branding, seasonal graphics, and jersey design for local ultimate frisbee association.',
 			tags: ['Illustrator'],
 			image: '/assets/images/projects/nua_case.png'
-		},
+		}
 		// {
 		// 	title: 'PELA - Portfolio for English Language Assessment',
 		// 	role: 'Owner, Sole Developer',
@@ -49,15 +59,6 @@
 		// 	image: '',
 		// 	url: '/'
 		// },
-		{
-			type: 'web',
-			title: 'Portfolio',
-			role: 'Developer',
-			description: 'this portfolio site',
-			tags: ['SvelteKit', 'CSS', 'Tailwind CSS', 'Sendgrid API', 'hCaptcha API', 'Illustrator'],
-			image: '/assets/images/projects/hc.png',
-			url: '/'
-		}
 	];
 </script>
 
