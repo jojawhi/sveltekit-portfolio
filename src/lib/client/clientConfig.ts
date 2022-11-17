@@ -1,13 +1,13 @@
-import {
-	PUBLIC_HCAPTCHA_SITEKEY,
-	PUBLIC_HCAPTCHA_SITE_KEY_LOCAL,
-	PUBLIC_HCAPTCHA_VERIFY_URL
-} from '$env/static/public';
+// import {
+// 	PUBLIC_HCAPTCHA_SITEKEY,
+// 	PUBLIC_HCAPTCHA_SITE_KEY_LOCAL,
+// 	PUBLIC_HCAPTCHA_VERIFY_URL
+// } from '$env/static/public';
 
 const clientConfig = {
-	hCaptchaVerifyURL: PUBLIC_HCAPTCHA_VERIFY_URL,
-	hCaptchaSiteKey: PUBLIC_HCAPTCHA_SITEKEY,
-	hCaptchaSiteKeyLocal: PUBLIC_HCAPTCHA_SITE_KEY_LOCAL
+	hCaptchaVerifyURL: import.meta.env.PUBLIC_HCAPTCHA_VERIFY_URL,
+	hCaptchaSiteKey: import.meta.env.PUBLIC_HCAPTCHA_SITEKEY,
+	hCaptchaSiteKeyLocal: import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY_LOCAL
 };
 
 export default clientConfig;
