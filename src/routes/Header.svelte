@@ -4,8 +4,12 @@
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	const activateLetter = (index: number) => {
-		$nameStore[index].active = true;
-		openAndCloseAfterTimeout();
+		if (!$nameStore[index].active) {
+			$nameStore[index].active = true;
+			openAndCloseAfterTimeout();
+		} else {
+			return;
+		}
 	};
 	// import logo from '$lib/images/svelte-logo.svg';
 	// import github from '$lib/images/github.svg';

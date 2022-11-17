@@ -15,8 +15,12 @@
 	};
 
 	const activateLetter = (index: number) => {
-		$nameStore[index].active = true;
-		openAndCloseAfterTimeout();
+		if (!$nameStore[index].active) {
+			$nameStore[index].active = true;
+			openAndCloseAfterTimeout();
+		} else {
+			return;
+		}
 	};
 </script>
 
