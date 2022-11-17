@@ -108,7 +108,7 @@
 
 			if (valid) {
 				// submitForm();
-				console.log('beginning fetch');
+				console.log('sending email...');
 
 				await fetch('api/verify', {
 					method: 'POST',
