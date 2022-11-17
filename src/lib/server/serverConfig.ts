@@ -13,8 +13,7 @@ if (browser) {
 const serverConfig = {
 	sendgridSecret: process.env.SENDGRID_SECRET,
 	sendgridSenderEmail: process.env.SENDGRID_SENDER_EMAIL,
-	hCaptchaSecret: process.env.HCAPTCHA_SECRET,
-	hCaptchaSecretLocal: process.env.HCAPTCHA_SECRET_LOCAL
+	hCaptchaSecret: process.env.HCAPTCHA_SECRET
 };
 
 // Local testing
