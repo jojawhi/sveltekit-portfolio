@@ -13,8 +13,7 @@
 
 const clientConfig = {
 	hCaptchaVerifyURL: import.meta.env.VITE_HCAPTCHA_VERIFY_URL,
-	hCaptchaSiteKey: import.meta.env.VITE_HCAPTCHA_SITEKEY,
-	hCaptchaSiteKeyLocal: import.meta.env.VITE_HCAPTCHA_SITE_KEY_LOCAL
+	hCaptchaSiteKey: import.meta.env.VITE_HCAPTCHA_SITEKEY
 };
 
 export default clientConfig;
