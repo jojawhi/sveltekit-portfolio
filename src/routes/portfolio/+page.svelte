@@ -6,33 +6,34 @@
 	const projects = [
 		{
 			type: 'web',
-			title: 'Hockey Canada',
+			title: 'Hockey Canada Home Page',
 			role: 'Technical Project Manager, Support Developer',
-			description: 'Hockey Canada website proof of concept',
-			tags: ['Next.js', 'Styled Components', 'Vercel', 'Linear'],
-			image: '/assets/images/projects/hc-gif.gif',
-			url: '/'
+			description:
+				'Provided development support and managed scheduling and kept meticulous records through discovery/requirements gathering, design iteration, and development of a proof of concept homepage for a proposed digital experience rebuild.',
+			tags: ['Next.js', 'Styled Components', 'Vercel CI/CD', 'Linear'],
+			image: '/assets/images/projects/hc-gif.gif'
+			// url: '/'
 		},
 		{
 			type: 'web',
 			title: 'Folkwise.io',
 			role: 'Developer, Graphic Designer',
 			description:
-				'A Markdown blog built with SvelteKit. I created graphics and branding, redesigned the UI, and integrated APIs for secure contact form.',
-			tags: ['SvelteKit', 'SCSS', 'Markdown', 'Sendgrid API', 'hCaptcha API', 'Vercel'],
-			image: '/assets/images/projects/folkwise.png',
-			url: '/'
+				'A Markdown blog built with SvelteKit. I created graphics and branding, redesigned the UI, and integrated APIs for a secure contact form.',
+			tags: ['SvelteKit', 'SCSS', 'Markdown', 'Sendgrid API', 'hCaptcha API', 'Vercel CI/CD'],
+			image: '/assets/images/projects/folkwise.png'
+			// url: '/'
 		},
-		{
-			type: 'web',
-			title: 'Tabeyou',
-			role: 'Designer, Sole Developer',
-			description:
-				'This web app was born out of my love of cooking but also my complete lack of memory of what I know how to cook when it is time to make the weekly shopping list. Mostly a simple CRUD app with some custom scheduling features and hopefully OCR integration in the future.',
-			tags: ['Next.js', 'SCSS', 'Firebase'],
-			image: '/assets/images/projects/hc.png',
-			url: '/'
-		},
+		// {
+		// 	type: 'web',
+		// 	title: 'Tabeyou',
+		// 	role: 'Designer, Sole Developer',
+		// 	description:
+		// 		'This web app was born out of my love of cooking but also my complete lack of memory of what I know how to cook when it is time to make the weekly shopping list. Mostly a simple CRUD app with some custom scheduling features and hopefully OCR integration in the future.',
+		// 	tags: ['Next.js', 'SCSS', 'Firebase'],
+		// 	image: '/assets/images/projects/hc.png',
+		// 	url: '/'
+		// },
 		{
 			type: 'web',
 			title: 'Portfolio',

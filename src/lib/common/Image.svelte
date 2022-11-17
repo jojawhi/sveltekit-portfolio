@@ -15,7 +15,7 @@
 		<img {src} {alt} class={imageTypes[type]} />
 	</div>
 {:else}
-	<div class="container">
+	<div class="flex">
 		<img {src} {alt} class={imageTypes[type]} />
 	</div>
 {/if}

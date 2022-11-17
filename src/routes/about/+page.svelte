@@ -14,7 +14,7 @@
 <div class="container mx-auto">
 	<Text type="pageTitle" content="This is Josh" />
 	<Section id="about">
-		<div class="container justify-center items-start gap-8 mb-8">
+		<div class="mb-8">
 			<Image src="/assets/images/headshot.jpg" alt="Josh White portrait" type="about" />
 			<div class="container">
 				<Text type="subheading" content="Web Developer" />

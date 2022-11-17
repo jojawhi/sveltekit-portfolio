@@ -27,7 +27,7 @@
 		<div class="flex flex-col">
 			<Text type="heading" content={project.title} />
 			<Text type="subheading" content={`Role: ${project.role}`} />
-			<Text type="body" content={project.description} />
+			<Text type="projectBody" content={project.description} />
 		</div>
 		<div class="flex flex-wrap gap-2 w-full">
 			{#each project.tags as tag}
@@ -38,8 +38,8 @@
 			<Link type="project" href={project.url} anchorText="Go to Project" />
 		{/if}
 	</div>
-	<div class="image-wrapper max-w-[50%] max-h-min align-self-end">
-		<img class="h-full w-full rounded-lg" src={project.image} alt="folkwise website screenshot" />
+	<div class="image-wrapper flex justify-center items-center max-w-[50%]">
+		<img class="rounded-lg" src={project.image} alt="folkwise website screenshot" />
 	</div>
 </div>
 
