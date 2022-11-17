@@ -36,9 +36,9 @@
 		}
 	});
 
-	let name = 'test';
-	let email = 'test@test.com';
-	let message = 'testtesttest';
+	let name = '';
+	let email = '';
+	let message = '';
 
 	let errors = {
 		name: '',
@@ -125,6 +125,7 @@
 				});
 
 				clearFormFields();
+				activateLetter(6);
 
 				// if (onClick) {
 				// 	onClick();
@@ -162,7 +163,7 @@
 			on:submit|preventDefault={handleSubmit}
 		>
 			<div class="flex flex-col w-full items-center">
-				<label for="name">Name</label>
+				<label for="name" class="text-white text-left w-full">Name</label>
 				<input
 					bind:value={name}
 					type="text"
@@ -176,7 +177,7 @@
 				{/if}
 			</div>
 			<div class="flex flex-col w-full items-center">
-				<label for="email">Email</label>
+				<label for="email" class="text-white text-left w-full">Email</label>
 				<input
 					bind:value={email}
 					type="text"
@@ -190,7 +191,7 @@
 				{/if}
 			</div>
 			<div class="flex flex-col w-full items-center">
-				<label for="message">Message</label>
+				<label for="message" class="text-white text-left w-full">Message</label>
 				<textarea
 					bind:value={message}
 					name="message"
@@ -208,7 +209,7 @@
 			<div
 				id="hcaptcha"
 				class="h-captcha"
-				data-sitekey={clientConfig.hCaptchaSiteKeyLocal}
+				data-sitekey={clientConfig.hCaptchaSiteKey}
 				data-size="invisible"
 				data-theme="dark"
 			/>

@@ -7,7 +7,7 @@
 		{
 			type: 'web',
 			title: 'Hockey Canada Home Page',
-			role: 'Technical Project Manager, Support Developer',
+			role: 'Technical Project Manager, Developer',
 			description:
 				'Provided development support and managed scheduling and kept meticulous records through discovery/requirements gathering, design iteration, and development of a proof of concept homepage for a proposed digital experience rebuild.',
 			tags: ['Next.js', 'Styled Components', 'Vercel CI/CD', 'Linear'],
@@ -38,10 +38,11 @@
 			type: 'web',
 			title: 'Portfolio',
 			role: 'Developer',
-			description: 'this portfolio site',
+			description:
+				"The site you're on! Navigate around and see if you can unlock all the letter variants in my nickname.",
 			tags: ['SvelteKit', 'CSS', 'Tailwind CSS', 'Sendgrid API', 'hCaptcha API', 'Illustrator'],
-			image: '/assets/images/projects/hc.png',
-			url: '/'
+			image: '/assets/images/projects/portfolio.png'
+			// url: '/'
 		},
 		{
 			type: 'graphic',

@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let onClick: () => void;
 	export let buttonType: string = 'default';
-	export let type: string;
+	export let type: string | undefined = undefined;
 
 	const buttonTypes: { [key: string]: string } = {
 		default:
