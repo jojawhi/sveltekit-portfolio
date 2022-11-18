@@ -20,10 +20,10 @@
 
 <div
 	class={key % 2 === 0
-		? 'left flex flex-row-reverse justify-between gap-8 my-4 p-4'
-		: 'right flex justify-between gap-8 my-4 p-4'}
+		? 'left flex flex-col sm:flex-row-reverse justify-between gap-8 my-4 p-4'
+		: 'right flex flex-col sm:flex-row justify-between gap-8 my-4 p-4'}
 >
-	<div class="flex flex-col w-1/2 max-w-max justify-between">
+	<div class="flex flex-col w-full sm:w-1/2 max-w-max justify-between">
 		<div class="flex flex-col">
 			<Text type="heading" content={project.title} />
 			<Text type="subheading" content={`Role: ${project.role}`} />
@@ -38,7 +38,7 @@
 			<Link type="project" href={project.url} anchorText="Go to Project" />
 		{/if}
 	</div>
-	<div class="image-wrapper flex justify-center items-center max-w-[50%]">
+	<div class="image-wrapper flex justify-center items-center w-full sm:max-w-[50%]">
 		<img class="rounded-lg" src={project.image} alt="folkwise website screenshot" />
 	</div>
 </div>
