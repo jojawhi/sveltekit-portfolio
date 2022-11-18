@@ -158,6 +158,7 @@
 </svelte:head>
 
 <div class="container flex flex-col items-center justify-center mx-auto">
+	<!-- TARDIS will go on this page -->
 	<Text type="pageTitle" content="Contact Josh" />
 	<Section id="contact">
 		<form

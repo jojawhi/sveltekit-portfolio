@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Github from '$lib/Github.svelte';
 	import Linkedin from '$lib/Linkedin.svelte';
+	import { nameStore } from './stores/name';
+	import { openAndCloseAfterTimeout } from './stores/drawer';
 
 	// const icons = [
 	// 	{
@@ -14,6 +16,15 @@
 	// 		alt: 'LinkedIn logo'
 	// 	}
 	// ];
+
+	const activateLetter = (index: number) => {
+		if (!$nameStore[index].active) {
+			$nameStore[index].active = true;
+			openAndCloseAfterTimeout();
+		} else {
+			return;
+		}
+	};
 </script>
 
 <div class="container flex gap-16 p-8 rounded-2xl mt-8 justify-center items-center mx-auto">
@@ -33,6 +44,10 @@
 	>
 		<Linkedin />
 	</a>
+	<!-- Kodama goes here when ready -->
+	<!-- <button on:click={() => activateLetter(0)}>
+		<div class="rattle w-8 h-10 bg-white rounded-2xl" />
+	</button> -->
 </div>
 
 <style>
@@ -43,7 +58,7 @@
 
 	.github:hover {
 		fill: #14b8a6; /*url(#GithubGradient2)*/
-		animation: rattle 1000ms ease forwards;
+		animation: spin 1000ms ease forwards;
 	}
 
 	.linkedin {
@@ -54,6 +69,10 @@
 	.linkedin:hover {
 		fill: #14b8a6; /*url(#LinkedinGradient2)*/
 		/* transform: scale(1.1); */
+		animation: spin 1000ms ease-in-out forwards;
+	}
+
+	.rattle:hover {
 		animation: rattle 1000ms ease-in-out forwards;
 	}
 

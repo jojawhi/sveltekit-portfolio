@@ -24,16 +24,16 @@
 			image: '/assets/images/projects/folkwise.png'
 			// url: '/'
 		},
-		// {
-		// 	type: 'web',
-		// 	title: 'Tabeyou',
-		// 	role: 'Designer, Sole Developer',
-		// 	description:
-		// 		'This web app was born out of my love of cooking but also my complete lack of memory of what I know how to cook when it is time to make the weekly shopping list. Mostly a simple CRUD app with some custom scheduling features and hopefully OCR integration in the future.',
-		// 	tags: ['Next.js', 'SCSS', 'Firebase'],
-		// 	image: '/assets/images/projects/hc.png',
-		// 	url: '/'
-		// },
+		{
+			type: 'web',
+			title: 'Tabeyou',
+			role: 'Developer, Designer',
+			description:
+				'This web app was born out of my love of cooking but also my complete lack of memory of what I know how to cook when it is time to make the weekly shopping list. A CRUD app with some custom scheduling features and hopefully OCR integration in the future. Rebuild in Next.js coming soon!',
+			tags: ['Next.js', 'SCSS', 'Firebase'],
+			image: '/assets/images/projects/tabeyou.png'
+			// url: '/'
+		},
 		{
 			type: 'web',
 			title: 'Portfolio',
@@ -60,6 +60,7 @@
 				'Logo, branding, seasonal graphics, and jersey design for local ultimate frisbee association.',
 			tags: ['Illustrator'],
 			image: '/assets/images/projects/nua_case.png'
+			//Lightsaber goes here
 		}
 		// {
 		// 	title: 'PELA - Portfolio for English Language Assessment',
@@ -81,6 +82,7 @@
 </svelte:head>
 
 <div class="project-container flex-col">
+	<!-- Enterprise goes on this page as a scroll tracker -->
 	<Text type="pageTitle" content="Software Development and Graphic Design Projects" />
 	{#each projects as project, i}
 		<Section id={`portfolio-${i}`} projectType={project.type}>
