@@ -10,7 +10,7 @@
 
 {#if type === 'about'}
 	<div
-		class="round flex md:float-right container w-1/2 lg:w-1/3 ml-12 mb-8 aspect-square rounded-full bg-gradient-to-r p-[5px] from-indigo-500 to-fuchsia-500"
+		class="round flex sm:float-right container w-full sm:w-1/2 sm:ml-12 mb-8 aspect-square rounded-full bg-gradient-to-r p-[5px] from-indigo-500 to-fuchsia-500"
 	>
 		<img {src} {alt} class={imageTypes[type]} />
 	</div>
