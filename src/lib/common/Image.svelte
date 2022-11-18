@@ -4,7 +4,8 @@
 	export let type: string;
 
 	const imageTypes: { [key: string]: string } = {
-		about: 'image-wrapper container rounded-full'
+		about: 'image-wrapper container rounded-full',
+		project: ''
 	};
 </script>
 

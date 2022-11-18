@@ -25,9 +25,15 @@
 </script>
 
 <div class="app relative overflow-hidden">
+	<!-- Golden Snitch will go in the layout, and randomly appear/disappear at different places on the page -->
 	<Header />
 	{#if $page.url.pathname != '/'}
-		<Drawer onClick={drawerClick} />
+		<Drawer
+			onClick={() => {
+				drawerClick();
+				activateLetter(3);
+			}}
+		/>
 	{/if}
 	<main class="pt-12">
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
