@@ -7,7 +7,7 @@
 		pageTitle: 'gradient-text font-extrabold text-4xl leading-tight mt-40 text-center',
 		heading: 'font-extrabold text-indigo-500 text-3xl',
 		subheading: 'font-bold text-white text-xl mb-4',
-		body: 'text-justify text-white text-base mb-4',
+		body: 'text-left sm:text-justify text-white text-base mb-4',
 		projectBody: 'text-left text-white text-base mb-4',
 		validation: 'text-fuchsia-400 text-sm self-start'
 	};

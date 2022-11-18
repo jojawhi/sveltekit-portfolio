@@ -49,7 +49,7 @@
 			href="https://github.com/jojawhi/sveltekit-portfolio"
 			target="_blank"
 			rel="noopener"
-			class="github w-6"
+			class="github w-8 sm:w-6"
 			on:click={() => activateLetter(0)}
 		>
 			<Github />
