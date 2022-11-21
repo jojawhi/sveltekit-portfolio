@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Button from './common/Button.svelte';
 	import { drawerStore } from './stores/drawer';
+	import { nameStore } from './stores/name';
 
 	// export let open: boolean;
 	export let onClick: () => void;
 </script>
 
 <Button buttonType="clear" {onClick}>
-	<!-- Leaves of Lorien goes here when ready -->
 	<div
 		class="
   absolute
@@ -30,7 +30,17 @@
   "
 	>
 		<div class="flex justify-center items-center w-full h-full bg-[#1b1b1d] rounded-full">
-			{#if $drawerStore}
+			{#if !$nameStore[1].active}
+				{#if $drawerStore}
+					<img
+						class="rotate-180"
+						src="assets/images/nameLetters/lorien.svg"
+						alt="the Leaves of LothLorien"
+					/>
+				{:else}
+					<img src="assets/images/nameLetters/lorien.svg" alt="the Leaves of LothLorien" />
+				{/if}
+			{:else if $drawerStore}
 				<img class="w-3/4" src="/assets/images/icons/angle-up.svg" alt="angle up" />
 			{:else}
 				<img class="w-3/4" src="/assets/images/icons/angle-down.svg" alt="angle down" />
