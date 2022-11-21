@@ -42,7 +42,7 @@
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg> -->
-		<ul class="flex justify-between gap-2 sm:gap-4 w-full text-base sm:text-lg">
+		<ul class="flex justify-between gap-2 sm:gap-4 w-full text-sm sm:text-base md:text-lg">
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">Home</a>
 			</li>
