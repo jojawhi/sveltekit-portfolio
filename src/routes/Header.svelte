@@ -36,13 +36,15 @@
 		/>
 	{/if}
 
-	<nav class="z-10 w-screen pt-8 px-8 bg-gradient-to-b from-[#1b1b1d] to-transparent via-[#1b1b1d]">
+	<nav
+		class="z-10 w-screen pt-8 px-2 sm:px-8 bg-gradient-to-b from-[#1b1b1d] to-transparent via-[#1b1b1d]"
+	>
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg> -->
-		<ul class="flex gap-4">
+		<ul class="flex justify-between gap-2 sm:gap-4 w-full text-base sm:text-lg">
 			<li class:active={$page.url.pathname === '/'}>
-				<a href="/" class="">Home</a>
+				<a href="/">Home</a>
 			</li>
 			<li class:active={$page.url.pathname === '/portfolio'}>
 				<a href="/portfolio">Portfolio</a>
@@ -162,7 +164,7 @@
 		text-decoration: none;
 		transition: color 0.2s linear; */
 		font-weight: 700;
-		font-size: 1.1rem;
+		/* font-size: 1.1rem; */
 		background-image: linear-gradient(90deg, white, white);
 		background-clip: text;
 		color: transparent;

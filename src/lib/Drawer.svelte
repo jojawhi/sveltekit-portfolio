@@ -8,8 +8,8 @@
 
 <div
 	class={$drawerStore
-		? `open container absolute w-max transition-all duration-300 rounded-xl bg-gradient-to-r p-[4px] from-indigo-500 to-fuchsia-500`
-		: `closed container absolute w-max transition-all duration-300 rounded-xl bg-gradient-to-r p-[4px] from-indigo-500 to-fuchsia-500`}
+		? `open container absolute md:w-max transition-all duration-300 rounded-xl bg-gradient-to-r p-[4px] from-indigo-500 to-fuchsia-500`
+		: `closed container absolute md:w-max transition-all duration-300 rounded-xl bg-gradient-to-r p-[4px] from-indigo-500 to-fuchsia-500`}
 >
 	<div
 		class={$drawerStore
