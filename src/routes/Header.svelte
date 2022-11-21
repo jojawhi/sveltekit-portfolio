@@ -31,7 +31,7 @@
 		<Drawer
 			onClick={() => {
 				drawerClick();
-				activateLetter(3);
+				activateLetter(1);
 			}}
 		/>
 	{/if}

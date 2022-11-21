@@ -31,7 +31,7 @@
 	</main>
 
 	<footer class="flex gap-4 w-full justify-center items-center text-center p-6 text-white">
-		<p>
+		<p class="text-sm md:text-base">
 			Designed and developed by Josh White. &copy; Copyright 2022.
 			<!-- <Link
 				type="default"
