@@ -1,18 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { nameStore } from '$lib/stores/name';
-	import { drawerStore } from '$lib/stores/drawer';
 	import Header from './Header.svelte';
-	import Drawer from '$lib/Drawer.svelte';
-	// import Link from '$lib/common/Link.svelte';
 	import Github from '$lib/Github.svelte';
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 	import '../app.css';
 	import './styles.css';
 
-	const drawerClick = () => {
-		drawerStore.set(!$drawerStore);
-	};
+	// const drawerClick = () => {
+	// 	drawerStore.set(!$drawerStore);
+	// };
 
 	const activateLetter = (index: number) => {
 		if (!$nameStore[index].active) {
@@ -27,14 +23,7 @@
 <div class="app relative overflow-hidden">
 	<!-- Golden Snitch will go in the layout, and randomly appear/disappear at different places on the page -->
 	<Header />
-	{#if $page.url.pathname != '/'}
-		<Drawer
-			onClick={() => {
-				drawerClick();
-				activateLetter(1);
-			}}
-		/>
-	{/if}
+
 	<main class="pt-12">
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
 		<slot />

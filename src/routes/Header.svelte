@@ -1,7 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { nameStore } from '$lib/stores/name';
+	import { drawerStore } from '$lib/stores/drawer';
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
+	import Drawer from '$lib/Drawer.svelte';
+
+	const drawerClick = () => {
+		drawerStore.set(!$drawerStore);
+	};
 
 	const activateLetter = (index: number) => {
 		if (!$nameStore[index].active) {
@@ -15,14 +21,22 @@
 	// import github from '$lib/images/github.svg';
 </script>
 
-<header>
+<header class="fixed self-center w-full">
 	<!-- <div class="corner">
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div> -->
+	{#if $page.url.pathname != '/'}
+		<Drawer
+			onClick={() => {
+				drawerClick();
+				activateLetter(3);
+			}}
+		/>
+	{/if}
 
-	<nav class="absolute z-10 pt-6">
+	<nav class="z-10 w-screen pt-8 px-8 bg-gradient-to-b from-[#1b1b1d] to-transparent via-[#1b1b1d]">
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg> -->
