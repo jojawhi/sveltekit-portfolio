@@ -30,7 +30,7 @@
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/" class="">Home</a>
 			</li>
-			<li class:active={$page.url.pathname === '/portfolio'} on:click={() => activateLetter(1)}>
+			<li class:active={$page.url.pathname === '/portfolio'}>
 				<a href="/portfolio">Portfolio</a>
 			</li>
 			<li class:active={$page.url.pathname === '/about'} on:click={() => activateLetter(5)}>
