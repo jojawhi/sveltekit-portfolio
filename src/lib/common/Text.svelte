@@ -3,7 +3,7 @@
 	export let content: string;
 
 	const textTypes: { [key: string]: string } = {
-		hero: 'gradient-text font-extrabold text-5xl mt-16',
+		hero: 'gradient-text font-extrabold md:text-5xl mt-16',
 		pageTitle: 'gradient-text font-extrabold text-4xl leading-tight mt-40 text-center',
 		heading: 'font-extrabold text-indigo-500 text-3xl',
 		subheading: 'font-bold text-white text-xl mb-4',
