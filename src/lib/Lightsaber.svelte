@@ -1,0 +1,68 @@
+<script lang="ts">
+	export let onClick: () => void;
+
+	let saberOn = false;
+</script>
+
+<div class="container flex relative h-12 items-center mt-4 md:px-8 mx-auto">
+	<button class="" on:click={onClick}>
+		<img
+			class="hilt w-32 sm:w-40 md:w-48 lg:w-64"
+			on:click={() => {
+				saberOn = true;
+			}}
+			src="/assets/images/nameLetters/lightsaber.svg"
+			alt="lightsaber"
+		/>
+	</button>
+
+	<div
+		class={saberOn
+			? 'unsheathe blade md:h-[0.25rem] lg:h-2 -ml-[0.75rem] mt-[0.25rem] md:mt-[0.75rem] lg:mt-[0.875rem]'
+			: 'blade md:h-[0.25rem] -ml-[0.75rem] mt-[0.25rem] md:mt-[0.75rem] lg:mt-[0.875rem]'}
+	/>
+</div>
+
+<style>
+	.container button {
+		/* top: 50%; */
+		z-index: 10;
+		/* transform: translateY(-50%); */
+	}
+
+	/* .hilt {
+	} */
+
+	.blade {
+		/* top: 53%;
+		left: 20%; */
+		max-width: 75%;
+		background: rgb(90, 255, 255);
+		box-shadow: 0 0 4px 2px cyan, 0 0 8px 4px white;
+		border-radius: 0 10% 10% 0;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.unsheathe {
+		animation: unsheathe 300ms linear forwards;
+	}
+
+	@keyframes unsheathe {
+		from {
+			width: 0;
+			opacity: 0;
+		}
+
+		to {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+
+	/* @media only screen and (min-width: 640px) {
+		.blade {
+			max-width: 75%;
+		}
+	} */
+</style>

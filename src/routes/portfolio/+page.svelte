@@ -2,6 +2,9 @@
 	import Text from '$lib/common/Text.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Section from '$lib/Section.svelte';
+	import Lightsaber from '$lib/Lightsaber.svelte';
+	import { nameStore } from '$lib/stores/name';
+	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	const projects = [
 		{
@@ -71,6 +74,15 @@
 		// 	url: '/'
 		// },
 	];
+
+	const activateLetter = (index: number) => {
+		if (!$nameStore[index].active) {
+			$nameStore[index].active = true;
+			openAndCloseAfterTimeout();
+		} else {
+			return;
+		}
+	};
 </script>
 
 <svelte:head>
@@ -89,6 +101,7 @@
 			<ProjectCard {project} key={i + 1} />
 		</Section>
 	{/each}
+	<Lightsaber onClick={() => activateLetter(4)} />
 </div>
 
 <style>

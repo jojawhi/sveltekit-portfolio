@@ -10,7 +10,7 @@
 	{#if id === 7}
 		<img class="max-h-20 sm:max-h-28 lg:max-h-36" {src} {alt} />
 	{:else if id === 6}
-		<img class="max-h-20 md:max-h-42" {src} {alt} />
+		<img class="max-h-30 sm:max-h-42" {src} {alt} />
 	{:else}
 		<img class="max-h-20 md:max-h-52 w-full" {src} {alt} />
 	{/if}

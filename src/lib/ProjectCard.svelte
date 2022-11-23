@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { nameStore } from './stores/name';
+	import { openAndCloseAfterTimeout } from './stores/drawer';
+	import Lightsaber from './Lightsaber.svelte';
 	import Text from './common/Text.svelte';
 	import Link from '$lib/common/Link.svelte';
 	import Tag from './Tag.svelte';
@@ -15,7 +18,6 @@
 
 	export let project: Project;
 	export let key: number;
-	console.log(key);
 </script>
 
 <div
@@ -39,7 +41,7 @@
 		{/if}
 	</div>
 	<div class="image-wrapper flex justify-center items-center w-full sm:max-w-[50%]">
-		<img class="rounded-lg" src={project.image} alt="folkwise website screenshot" />
+		<img class="rounded-lg" src={project.image} alt="screenshot of project" />
 	</div>
 </div>
 
