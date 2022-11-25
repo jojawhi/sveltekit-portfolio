@@ -1,18 +1,20 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { nameStore } from '$lib/stores/name';
-
 	import Header from './Header.svelte';
 	import Github from '$lib/Github.svelte';
 	import Snitch from '$lib/Snitch.svelte';
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 	import '../app.css';
 	import './styles.css';
-	import { bind } from 'svelte/internal';
 
-	let snitchVisible = false;
-	let topValue: string = `${Math.floor(Math.random() * 6 + 2)}%`;
-	let leftValue: string = `${Math.floor(Math.random() * 6 + 2)}%`;
+	const snitchOptions: { [key: number]: string } = {
+		0: 'hidden',
+		1: 'right',
+		2: 'left'
+	};
+
+	let snitchVisible = snitchOptions[0];
 
 	onMount(() => {
 		showSnitch();
@@ -22,7 +24,7 @@
 		if (!$nameStore[index].active) {
 			$nameStore[index].active = true;
 			if (index === 5) {
-				snitchVisible = false;
+				snitchVisible = snitchOptions[0];
 			}
 			openAndCloseAfterTimeout();
 		} else {
@@ -31,24 +33,20 @@
 	};
 
 	const showSnitch = () => {
-		topValue = `${Math.floor(Math.random() * 6 + 2)}%`;
-		leftValue = `${Math.floor(Math.random() * 6 + 2)}%`;
-		snitchVisible = true;
+		snitchVisible = snitchOptions[Math.floor(Math.random() * 2 + 1)];
 
 		setTimeout(() => {
 			hideSnitch();
-		}, Math.floor(Math.random() * 10000));
+		}, Math.floor(Math.random() * 10000 + 1));
 	};
 
 	const hideSnitch = () => {
-		topValue = `${Math.floor(Math.random() * 6 + 2)}%`;
-		leftValue = `${Math.floor(Math.random() * 6 + 2)}%`;
-		snitchVisible = false;
+		snitchVisible = snitchOptions[0];
 
 		if (!$nameStore[5].active) {
 			setTimeout(() => {
 				showSnitch();
-			}, Math.floor(Math.random() * 10000));
+			}, Math.floor(Math.random() * 10000 + 1));
 		}
 	};
 </script>
@@ -57,9 +55,11 @@
 	<Header />
 
 	<main class="relative">
-		<div class={snitchVisible ? `snitch absolute` : `snitch absolute hidden`}>
-			<Snitch onClick={() => activateLetter(5)} />
-		</div>
+		{#if snitchVisible != 'hidden'}
+			<div class={`${snitchVisible} absolute`}>
+				<Snitch onClick={() => activateLetter(5)} />
+			</div>
+		{/if}
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
 		<slot />
 		<!-- </div> -->
@@ -105,10 +105,22 @@
 		box-sizing: border-box;
 	}
 
-	.snitch {
+	/* .snitch {
 		top: 40%;
 		left: 50%;
 		transform: translateX(-50%);
+	} */
+
+	.right {
+		top: 4rem;
+		right: 15%;
+		transform: translateX(0);
+	}
+
+	.left {
+		top: 4rem;
+		left: 15%;
+		transform: translateX(0);
 	}
 
 	/* footer {
@@ -140,9 +152,17 @@
 		}
 	}
 
-	@media (min-width: 480px) {
-		/* footer {
-			padding: 12px 0;
-		} */
+	@media (min-width: 640px) {
+		.top {
+			top: 40%;
+			left: 10%;
+			transform: translateX(0);
+		}
+
+		.bottom {
+			top: 40%;
+			right: 10%;
+			transform: translateX(0);
+		}
 	}
 </style>
