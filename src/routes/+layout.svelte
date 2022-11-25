@@ -1,30 +1,65 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { nameStore } from '$lib/stores/name';
+
 	import Header from './Header.svelte';
 	import Github from '$lib/Github.svelte';
+	import Snitch from '$lib/Snitch.svelte';
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 	import '../app.css';
 	import './styles.css';
+	import { bind } from 'svelte/internal';
 
-	// const drawerClick = () => {
-	// 	drawerStore.set(!$drawerStore);
-	// };
+	let snitchVisible = false;
+	let topValue: string = `${Math.floor(Math.random() * 6 + 2)}%`;
+	let leftValue: string = `${Math.floor(Math.random() * 6 + 2)}%`;
+
+	onMount(() => {
+		showSnitch();
+	});
 
 	const activateLetter = (index: number) => {
 		if (!$nameStore[index].active) {
 			$nameStore[index].active = true;
+			if (index === 5) {
+				snitchVisible = false;
+			}
 			openAndCloseAfterTimeout();
 		} else {
 			return;
 		}
 	};
+
+	const showSnitch = () => {
+		topValue = `${Math.floor(Math.random() * 6 + 2)}%`;
+		leftValue = `${Math.floor(Math.random() * 6 + 2)}%`;
+		snitchVisible = true;
+
+		setTimeout(() => {
+			hideSnitch();
+		}, Math.floor(Math.random() * 10000));
+	};
+
+	const hideSnitch = () => {
+		topValue = `${Math.floor(Math.random() * 6 + 2)}%`;
+		leftValue = `${Math.floor(Math.random() * 6 + 2)}%`;
+		snitchVisible = false;
+
+		if (!$nameStore[5].active) {
+			setTimeout(() => {
+				showSnitch();
+			}, Math.floor(Math.random() * 10000));
+		}
+	};
 </script>
 
 <div class="app relative overflow-hidden">
-	<!-- Golden Snitch will go in the layout, and randomly appear/disappear at different places on the page -->
 	<Header />
 
-	<main class="pt-12">
+	<main class="relative">
+		<div class={snitchVisible ? `snitch absolute` : `snitch absolute hidden`}>
+			<Snitch onClick={() => activateLetter(5)} />
+		</div>
 		<!-- <div class="content-wrapper" in:fade={{ duration: 150 }} out:fade={{ duration: 150 }}> -->
 		<slot />
 		<!-- </div> -->
@@ -68,6 +103,12 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
+	}
+
+	.snitch {
+		top: 40%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	/* footer {
