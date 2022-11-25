@@ -55,7 +55,7 @@
 			<!-- <li class:active={$page.url.pathname === '/blog'} on:click={() => activateLetter(3)}>
 				<a href="/blog">Blog</a>
 			</li> -->
-			<li class:active={$page.url.pathname === '/contact'} on:click={() => activateLetter(4)}>
+			<li class:active={$page.url.pathname === '/contact'}>
 				<a href="/contact">Contact</a>
 			</li>
 			<!-- <li class:active={$page.url.pathname.startsWith('/sverdle')}>
@@ -78,6 +78,7 @@
 	header {
 		display: flex;
 		justify-content: center;
+		z-index: 9999;
 	}
 
 	/* .corner {
