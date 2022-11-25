@@ -4,15 +4,19 @@
 
 <div class="container relative mt-20">
 	<button class="flit w-40 h-12 absolute" on:click={onClick}>
-		<div class="l-wing absolute w-16">
+		<div class="l-wing absolute w-12 sm:w-16">
 			<img class="w-16" src="/assets/images/nameLetters/l-wing.svg" alt="Golden Snitch left wing" />
 		</div>
 		<div class="snitch absolute w-8">
-			<img class="w-8" src="/assets/images/nameLetters/snitch.svg" alt="Golden Snitch body" />
+			<img
+				class="w-6 sm:w-8"
+				src="/assets/images/nameLetters/snitch.svg"
+				alt="Golden Snitch body"
+			/>
 		</div>
 		<div class="r-wing absolute w-16">
 			<img
-				class="w-16"
+				class="w-12 sm:w-16"
 				src="/assets/images/nameLetters/r-wing.svg"
 				alt="Golden Snitch right wing"
 			/>
@@ -36,19 +40,19 @@
 	}
 
 	.l-wing {
-		top: -19%;
-		left: 2%;
+		top: -2.5%;
+		left: 11.5%;
 		transform-origin: right bottom;
 		z-index: 2;
-		animation: flap-left 100ms ease-in infinite;
+		animation: flap-left 100ms ease-in-out infinite;
 	}
 
 	.r-wing {
-		top: -19%;
-		right: 2%;
+		top: -2.5%;
+		right: 6.5%;
 		transform-origin: left bottom;
 		z-index: 2;
-		animation: flap-right 100ms ease-in infinite;
+		animation: flap-right 100ms ease-in-out infinite;
 	}
 
 	@keyframes flap-right {
@@ -122,6 +126,18 @@
 
 		100% {
 			transform: translate(-50%, -50%);
+		}
+	}
+
+	@media only screen and (min-width: 640px) {
+		.l-wing {
+			top: -19%;
+			left: 2%;
+		}
+
+		.r-wing {
+			top: -19%;
+			right: 2%;
 		}
 	}
 </style>

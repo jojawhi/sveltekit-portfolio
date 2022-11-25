@@ -1,9 +1,14 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { nameStore } from './stores/name';
 	import LetterImage from './LetterImage.svelte';
 </script>
 
-<div class="container grid grid-cols-7 gap-2 md:gap-4 lg:gap-6 mx-auto items-start pt-24">
+<div
+	class={$page.url.pathname === '/'
+		? 'container grid grid-cols-7 gap-2 md:gap-4 lg:gap-6 mx-auto items-start pt-36'
+		: 'container grid grid-cols-7 gap-2 md:gap-4 lg:gap-6 mx-auto items-start pt-24'}
+>
 	{#each $nameStore as letter}
 		{#if letter.active}
 			<LetterImage id={letter.id} src={letter.image} alt={letter.alt} />
