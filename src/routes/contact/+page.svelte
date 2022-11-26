@@ -7,6 +7,7 @@
 	import Text from '$lib/common/Text.svelte';
 	import Button from '$lib/common/Button.svelte';
 	import { nameStore } from '$lib/stores/name';
+	import { displayStore } from '$lib/stores/displays';
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	/** @typedef {{
@@ -143,6 +144,7 @@
 		if (!$nameStore[index].active) {
 			$nameStore[index].active = true;
 			openAndCloseAfterTimeout();
+			$displayStore[3].display = false;
 		} else {
 			return;
 		}
