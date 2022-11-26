@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Tardis from '$lib/Tardis.svelte';
 	import Section from '$lib/Section.svelte';
 	import { browser } from '$app/environment';
 	import { onMount, onDestroy } from 'svelte';
@@ -6,7 +7,7 @@
 	import Text from '$lib/common/Text.svelte';
 	import Button from '$lib/common/Button.svelte';
 	import { nameStore } from '$lib/stores/name';
-	import { drawerStore, openAndCloseAfterTimeout } from '$lib/stores/drawer';
+	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	/** @typedef {{
     execute(hcaptchaWidgetID?: string , opts?: { async: boolean }): Promise<HCaptchaExecuteResponse> | null;
@@ -161,6 +162,7 @@
 	<!-- TARDIS will go on this page -->
 	<Text type="pageTitle" content="Contact Josh" />
 	<Section id="contact">
+		<Tardis onClick={() => activateLetter(6)} />
 		<form
 			id="contact-form"
 			class="container w-full flex flex-col items-center justify-center"
@@ -221,7 +223,5 @@
 
 			<Button buttonType="contact" type="submit" onClick={() => console.log('send')}>Send</Button>
 		</form>
-
-		<!-- <Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button> -->
 	</Section>
 </div>
