@@ -19,6 +19,11 @@
 		opacity: 0;
 		animation: materialize 15000ms ease-in-out 5000ms forwards;
 	}
+
+	.dematerialize {
+		display: block;
+		animation: dematerialize 7500ms ease-in-out forwards;
+	}
 	@keyframes materialize {
 		0% {
 			opacity: 0;
@@ -67,43 +72,53 @@
 
 	@keyframes dematerialize {
 		0% {
+			display: block;
 			opacity: 1;
 		}
 
 		10% {
+			display: block;
 			opacity: 0;
 		}
 
 		20% {
+			display: block;
 			opacity: 1;
 		}
 
 		35% {
+			display: block;
 			opacity: 0;
 		}
 
 		45% {
+			display: block;
 			opacity: 1;
 		}
 
 		55% {
+			display: block;
 			opacity: 0;
 		}
 
 		65% {
+			display: block;
 			opacity: 1;
 		}
 
 		75% {
+			display: block;
 			opacity: 0;
 		}
 
 		85% {
+			display: block;
 			opacity: 1;
 		}
 
 		100% {
 			opacity: 0;
+			display: none;
 		}
 	}
 </style>
