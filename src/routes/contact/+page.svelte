@@ -34,7 +34,16 @@
 
 	onDestroy(() => {
 		if (browser) {
-			hcaptcha = { execute: async () => ({ response: '' }), render: () => '' };
+			hcaptcha = {
+				execute: async () => ({ response: '', key: '' }),
+				render: () => '',
+				reset: () => '',
+				close: () => '',
+				remove: () => '',
+				getResponse: () => '',
+				getRespKey: () => '',
+				setData: () => ''
+			};
 		}
 	});
 
