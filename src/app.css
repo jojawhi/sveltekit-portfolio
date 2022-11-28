@@ -4,10 +4,42 @@
 
 @layer base {
 	@font-face {
-		font-family: 'Ringbearer Medium';
-		src: local('Ringbearer Medium'), local('Ringbearer-Medium'), local('ringbearer medium'),
-			local('ringbearer-medium'), url('/fonts/ringbearer/ringbearer.TTF');
+		font-family: 'Gotham';
+		src: local('Gotham Light'), local('Gotham-Light'), local('GothamLight'), local('gotham light'),
+			local('gotham-light'), local('gothamlight'), url('/fonts/gotham/Gotham-Light.ttf');
+		font-weight: 400;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Gotham';
+		src: local('Gotham'), local('gotham'), url('/fonts/gotham/GothamBook.ttf');
 		font-weight: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Gotham';
+		src: local('Gotham Medium'), local('Gotham-Medium'), local('GothamMedium'),
+			local('gotham medium'), local('gotham-medium'), local('gothammedium'),
+			url('/fonts/gotham/GothamMedium.ttf');
+		font-weight: 500;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Gotham';
+		src: local('Gotham Bold'), local('gotham bold'), local('gotham-bold'), local('GothamBold'),
+			url('/fonts/gotham/GothamBold.ttf');
+		font-weight: 700;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Gotham';
+		src: local('Gotham Black'), local('GothamBlack'), local('Gotham-Black'), local('gotham black'),
+			local('gotham-black'), local('gothamblack'), url('/fonts/gotham/Gotham-Black.otf');
+		font-weight: 900;
 		font-display: swap;
 	}
 }

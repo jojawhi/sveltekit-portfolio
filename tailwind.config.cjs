@@ -11,7 +11,7 @@ module.exports = {
 				'pos-100': '100% 100%'
 			},
 			fontFamily: {
-				ringbearer: ['Ringbearer']
+				gotham: ['Gotham']
 			}
 		}
 	},

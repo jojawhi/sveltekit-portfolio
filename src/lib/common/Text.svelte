@@ -3,13 +3,15 @@
 	export let content: string;
 
 	const textTypes: { [key: string]: string } = {
-		hero: 'gradient-text font-extrabold md:text-5xl mt-16',
-		pageTitle: 'gradient-text font-extrabold text-3xl md:text-4xl leading-tight mt-40 text-center',
-		heading: 'font-extrabold text-indigo-500 text-2xl md:text-2xl lg:text-3xl',
-		subheading: 'font-bold text-white text-lg mb-4',
-		body: 'text-left sm:text-justify text-white text-base mb-4',
-		projectBody: 'text-left text-white text-base mb-4',
-		validation: 'text-fuchsia-400 text-sm self-start'
+		hero: 'font-gotham font-black gradient-text md:text-5xl mt-16',
+		heroSubheading: 'font-gotham font-semibold text-white text-xl mb-4',
+		pageTitle:
+			'font-gotham font-black gradient-text text-3xl md:text-4xl leading-tight mt-40 text-center',
+		heading: 'font-gotham font-bold text-indigo-500 text-2xl md:text-2xl lg:text-3xl',
+		subheading: 'font-gotham font-medium text-white text-lg my-4',
+		body: 'font-gotham font-light text-left sm:text-justify text-white text-base mb-4',
+		projectBody: 'font-gotham font-light text-left text-white text-base mb-4',
+		validation: 'font-gotham font-light text-fuchsia-400 text-sm self-start'
 	};
 </script>
 

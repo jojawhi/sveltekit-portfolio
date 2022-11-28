@@ -15,6 +15,6 @@ export const displayStore = writable([
 	},
 	{
 		id: 'tardis',
-		display: false
+		display: true
 	}
 ]);

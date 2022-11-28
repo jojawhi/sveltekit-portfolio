@@ -7,7 +7,7 @@
 <div class="container flex relative h-12 items-center mt-4 md:px-8 mx-auto">
 	<button class="" on:click={onClick}>
 		<img
-			class="hilt w-32 sm:w-40 md:w-48 lg:w-64"
+			class="hilt w-28 sm:w-36 md:w-44 lg:w-60"
 			on:click={() => {
 				saberOn = true;
 			}}

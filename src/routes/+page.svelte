@@ -19,10 +19,12 @@
 <div class="flex flex-col text-center gap-6">
 	<Name />
 	<Text type="hero" content="Full Stack Developer" />
-	<Text
-		type="subheading"
-		content="I'll help you build clean and modern UIs, integrate 3rd-party APIs, and connect seamlessly to your backend data."
-	/>
+	<div class="container text-justify max-w-screen-sm mx-auto">
+		<Text
+			type="heroSubheading"
+			content="I'll help you build clean and modern UIs, integrate 3rd-party APIs, and connect seamlessly to your backend data."
+		/>
+	</div>
 	<HeroIcons />
 	<SocialIcons />
 </div>

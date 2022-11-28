@@ -1,12 +1,17 @@
 <script lang="ts">
-	import Section from '$lib/Section.svelte';
 	import { browser } from '$app/environment';
 	import { onMount, onDestroy } from 'svelte';
+
 	import clientConfig from '$lib/client/clientConfig';
+
+	import { nameStore } from '$lib/stores/name';
+	import { displayStore } from '$lib/stores/displays';
+	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
+
+	import Tardis from '$lib/Tardis.svelte';
+	import Section from '$lib/Section.svelte';
 	import Text from '$lib/common/Text.svelte';
 	import Button from '$lib/common/Button.svelte';
-	import { nameStore } from '$lib/stores/name';
-	import { drawerStore, openAndCloseAfterTimeout } from '$lib/stores/drawer';
 
 	/** @typedef {{
     execute(hcaptchaWidgetID?: string , opts?: { async: boolean }): Promise<HCaptchaExecuteResponse> | null;
@@ -32,7 +37,16 @@
 
 	onDestroy(() => {
 		if (browser) {
-			hcaptcha = { execute: async () => ({ response: '' }), render: () => '' };
+			hcaptcha = {
+				execute: async () => ({ response: '', key: '' }),
+				render: () => '',
+				reset: () => '',
+				close: () => '',
+				remove: () => '',
+				getResponse: () => '',
+				getRespKey: () => '',
+				setData: () => ''
+			};
 		}
 	});
 
@@ -142,6 +156,9 @@
 		if (!$nameStore[index].active) {
 			$nameStore[index].active = true;
 			openAndCloseAfterTimeout();
+			// setTimeout(() => {
+			$displayStore[3].display = false;
+			// }, 7500);
 		} else {
 			return;
 		}
@@ -161,6 +178,9 @@
 	<!-- TARDIS will go on this page -->
 	<Text type="pageTitle" content="Contact Josh" />
 	<Section id="contact">
+		<!-- {#if $displayStore[3].display} -->
+		<!-- <Tardis onClick={() => activateLetter(6)} /> -->
+		<!-- {/if} -->
 		<form
 			id="contact-form"
 			class="container w-full flex flex-col items-center justify-center"
@@ -221,7 +241,5 @@
 
 			<Button buttonType="contact" type="submit" onClick={() => console.log('send')}>Send</Button>
 		</form>
-
-		<!-- <Button buttonType="default" onClick={() => activateLetter(6)}>Activate Final Letter!</Button> -->
 	</Section>
 </div>
