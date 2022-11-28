@@ -17,7 +17,7 @@
 <style>
 	.materialize {
 		opacity: 0;
-		animation: materialize 15000ms ease-in-out 5000ms forwards;
+		animation: materialize 15000ms ease-in-out 1000ms forwards;
 	}
 
 	.dematerialize {
@@ -117,8 +117,8 @@
 		}
 
 		100% {
-			opacity: 0;
 			display: none;
+			opacity: 0;
 		}
 	}
 </style>

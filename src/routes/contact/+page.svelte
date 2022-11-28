@@ -144,7 +144,9 @@
 		if (!$nameStore[index].active) {
 			$nameStore[index].active = true;
 			openAndCloseAfterTimeout();
+			// setTimeout(() => {
 			$displayStore[3].display = false;
+			// }, 7500);
 		} else {
 			return;
 		}
@@ -164,7 +166,9 @@
 	<!-- TARDIS will go on this page -->
 	<Text type="pageTitle" content="Contact Josh" />
 	<Section id="contact">
+		<!-- {#if $displayStore[3].display} -->
 		<Tardis onClick={() => activateLetter(6)} />
+		<!-- {/if} -->
 		<form
 			id="contact-form"
 			class="container w-full flex flex-col items-center justify-center"
