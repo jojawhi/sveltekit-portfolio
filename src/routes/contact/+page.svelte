@@ -1,14 +1,17 @@
 <script lang="ts">
-	import Tardis from '$lib/Tardis.svelte';
-	import Section from '$lib/Section.svelte';
 	import { browser } from '$app/environment';
 	import { onMount, onDestroy } from 'svelte';
+
 	import clientConfig from '$lib/client/clientConfig';
-	import Text from '$lib/common/Text.svelte';
-	import Button from '$lib/common/Button.svelte';
+
 	import { nameStore } from '$lib/stores/name';
 	import { displayStore } from '$lib/stores/displays';
 	import { openAndCloseAfterTimeout } from '$lib/stores/drawer';
+
+	import Tardis from '$lib/Tardis.svelte';
+	import Section from '$lib/Section.svelte';
+	import Text from '$lib/common/Text.svelte';
+	import Button from '$lib/common/Button.svelte';
 
 	/** @typedef {{
     execute(hcaptchaWidgetID?: string , opts?: { async: boolean }): Promise<HCaptchaExecuteResponse> | null;
@@ -176,7 +179,7 @@
 	<Text type="pageTitle" content="Contact Josh" />
 	<Section id="contact">
 		<!-- {#if $displayStore[3].display} -->
-		<Tardis onClick={() => activateLetter(6)} />
+		<!-- <Tardis onClick={() => activateLetter(6)} /> -->
 		<!-- {/if} -->
 		<form
 			id="contact-form"
