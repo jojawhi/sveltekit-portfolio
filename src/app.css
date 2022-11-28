@@ -38,7 +38,7 @@
 	@font-face {
 		font-family: 'Gotham';
 		src: local('Gotham Black'), local('GothamBlack'), local('Gotham-Black'), local('gotham black'),
-			local('gotham-black'), local('gothamblack'), url('/fonts/gotham/Gotham-Bold.otf');
+			local('gotham-black'), local('gothamblack'), url('/fonts/gotham/Gotham-Black.otf');
 		font-weight: 900;
 		font-display: swap;
 	}
