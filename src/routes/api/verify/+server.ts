@@ -88,29 +88,24 @@ const sendEmail = async (formObject: Record<string, string>) => {
 
     Regards,
 
-    Josh
+    Josh @ jojawhi.com
     `
 	};
 
-	sgMail
+	await sgMail
 		.send(message)
-		.then(() => {
+		.then(async () => {
 			// showNotification.set(true);
 			// notification = getNotification('success');
 			console.log('Email sent successfully');
+			await sgMail
+				.send(confirmationMessage)
+				.then(() => console.log('Confirmation sent.'))
+				.catch(error => console.log(error.message));
 		})
 		.catch(error => {
 			// showNotification.set(true);
 			// notification = getNotification('error');
 			console.log(error.message);
 		});
-
-	console.log('email sent');
-
-	sgMail
-		.send(confirmationMessage)
-		.then(() => console.log('Confirmation sent.'))
-		.catch(error => console.log(error.message));
-
-	console.log('confirmation sent');
 };
