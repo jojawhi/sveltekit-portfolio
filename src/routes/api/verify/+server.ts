@@ -50,7 +50,8 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
 		if (success) {
 			console.log('hCaptcha success!');
 			// send email if hCaptcha responds with success
-			sendEmail(messageObject);
+			await sendEmail(messageObject);
+			console.log('After email log');
 		} else {
 			console.log('hCaptcha failure!');
 			// showNotification.set(true);
@@ -92,13 +93,13 @@ const sendEmail = async (formObject: Record<string, string>) => {
     `
 	};
 
-	await sgMail
+	sgMail
 		.send(message)
-		.then(async () => {
+		.then(() => {
 			// showNotification.set(true);
 			// notification = getNotification('success');
 			console.log('Email sent successfully');
-			await sgMail
+			sgMail
 				.send(confirmationMessage)
 				.then(() => console.log('Confirmation sent.'))
 				.catch(error => console.log(error.message));
