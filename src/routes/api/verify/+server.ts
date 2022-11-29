@@ -5,7 +5,7 @@ import sgMail from '@sendgrid/mail';
 
 const sendgrid = serverConfig.sendgridSecret as string;
 
-console.log('Sendgrid key:', sendgrid);
+// console.log('Sendgrid key:', sendgrid);
 
 sgMail.setApiKey(sendgrid);
 
@@ -13,7 +13,8 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
 	try {
 		const { name, email, message, response: hCaptchaClientResponse } = await request.json();
 
-		console.log('Server response:', hCaptchaClientResponse);
+		console.log('Sendgrid key:', sendgrid);
+		// console.log('Server response:', hCaptchaClientResponse);
 
 		const messageObject = {
 			name,
@@ -32,7 +33,7 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
 		// const siteKey: string = clientConfig.hCaptchaSiteKeyLocal;
 		// const hCaptchaBody = new URLSearchParams({ response: hCaptchaClientResponse, secret, siteKey });
 
-		console.log('Request sent');
+		console.log('hCaptcha request sent');
 
 		const verifyResponse = await fetch('https://hcaptcha.com/siteverify', {
 			method: 'POST',
@@ -45,7 +46,7 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
 
 		const data = await verifyResponse.json();
 		const { success } = data;
-		console.log(`data: `, data);
+		// console.log(`data: `, data);
 		if (success) {
 			console.log('hCaptcha success!');
 			// send email if hCaptcha responds with success
@@ -65,6 +66,8 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
 };
 
 const sendEmail = async (formObject: Record<string, string>) => {
+	console.log('Start send email');
+
 	const message = {
 		to: 'jojawhi@gmail.com', //testing purposes
 		from: 'contact@jojawhi.com', //testing purposes
@@ -102,8 +105,12 @@ const sendEmail = async (formObject: Record<string, string>) => {
 			console.log(error.message);
 		});
 
+	console.log('email sent');
+
 	sgMail
 		.send(confirmationMessage)
 		.then(() => console.log('Confirmation sent.'))
 		.catch(error => console.log(error.message));
+
+	console.log('confirmation sent');
 };
