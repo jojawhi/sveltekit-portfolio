@@ -89,7 +89,9 @@ const sendEmail = async (formObject: Record<string, string>) => {
 
     Regards,
 
-    Josh @ jojawhi.com
+    Josh
+		Software Developer
+		www.jojawhi.com
     `
 	};
 
