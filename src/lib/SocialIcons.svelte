@@ -63,7 +63,8 @@
 
 	.github:hover {
 		fill: #14b8a6; /*url(#GithubGradient2)*/
-		animation: spin 500ms ease forwards;
+		transform: scale(1.05);
+		/* animation: spin 500ms ease forwards; */
 	}
 
 	.linkedin {
@@ -73,8 +74,8 @@
 
 	.linkedin:hover {
 		fill: #14b8a6; /*url(#LinkedinGradient2)*/
-		/* transform: scale(1.1); */
-		animation: spin 500ms ease-in-out forwards;
+		transform: scale(1.05);
+		/* animation: spin 500ms ease-in-out forwards; */
 	}
 
 	@keyframes spin {
