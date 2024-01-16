@@ -115,4 +115,14 @@
 	.nav-link:hover::after {
 		transform: scaleX(1);
 	}
+
+	@media only screen and (max-width: 400px) {
+		.nav-link:after {
+			bottom: 0;
+		}
+
+		.nav-link.active::before {
+			bottom: 0;
+		}
+	}
 </style>
