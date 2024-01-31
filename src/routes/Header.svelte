@@ -80,7 +80,7 @@
 		width: 100%;
 		height: 4px;
 		position: absolute;
-		bottom: 27%;
+		bottom: 0;
 		background-image: linear-gradient(90deg, #4f46e5, #c026d3);
 	}
 
@@ -106,7 +106,7 @@
 		width: 100%;
 		height: 3px;
 		position: absolute;
-		bottom: 27%;
+		bottom: 0;
 		background-image: linear-gradient(90deg, #4f46e5, #c026d3);
 		transform: scaleX(0);
 		transition: all 150ms;
