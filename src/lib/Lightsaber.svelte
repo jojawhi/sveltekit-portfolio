@@ -9,7 +9,7 @@
 		<img
 			class="hilt w-28 sm:w-36 md:w-44 lg:w-60"
 			on:click={() => {
-				saberOn = true;
+				saberOn = !saberOn;
 			}}
 			src="/assets/images/nameLetters/lightsaber.svg"
 			alt="lightsaber"
@@ -19,7 +19,7 @@
 	<div
 		class={saberOn
 			? 'unsheathe blade md:h-[0.25rem] lg:h-2 -ml-[0.75rem] mt-[0.25rem] md:mt-[0.75rem] lg:mt-[0.875rem]'
-			: 'blade md:h-[0.25rem] -ml-[0.75rem] mt-[0.25rem] md:mt-[0.75rem] lg:mt-[0.875rem]'}
+			: 'sheathe blade md:h-[0.25rem] -ml-[0.75rem] mt-[0.25rem] md:mt-[0.75rem] lg:mt-[0.875rem]'}
 	/>
 </div>
 
@@ -48,6 +48,10 @@
 		animation: unsheathe 300ms linear forwards;
 	}
 
+	.sheathe {
+		animation: sheathe 300ms linear forwards;
+	}
+
 	@keyframes unsheathe {
 		from {
 			width: 0;
@@ -57,6 +61,23 @@
 		to {
 			width: 100%;
 			opacity: 1;
+		}
+	}
+
+	@keyframes sheathe {
+		0% {
+			width: 100%;
+			opacity: 1;
+		}
+
+		75% {
+			width: 25%;
+			opacity: 1;
+		}
+
+		100% {
+			width: 0;
+			opacity: 0;
 		}
 	}
 
