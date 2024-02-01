@@ -23,13 +23,20 @@
 	/* Safari 11+ */
 	@media not all and (min-resolution: 0.001dpcm) {
 		@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+			.tag {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
 			.tag-text {
-				margin-top: 0.5rem;
+				height: 1rem;
 			}
 
 			@media screen and (max-width: 450px) {
 				.tag-text {
-					margin-top: 0.25rem;
+					height: 0.75rem;
+					padding: 0.5rem 0;
 				}
 			}
 		}
