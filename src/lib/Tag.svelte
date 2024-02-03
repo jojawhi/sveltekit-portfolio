@@ -11,17 +11,22 @@
 <style>
 	.tag {
 		user-select: none;
+		/* display: flex;
+		justify-content: center;
+		align-items: center; */
 	}
 	/* .tag:hover {
 		transform: scale(1.025);
 	} */
 
 	.tag-text {
-		display: block;
+		display: inline-block;
+		vertical-align: bottom;
+		line-height: 0.75;
 	}
 
 	/* Safari 11+ */
-	@media not all and (min-resolution: 0.001dpcm) {
+	/* @media not all and (min-resolution: 0.001dpcm) {
 		@supports (-webkit-appearance: none) and (stroke-color: transparent) {
 			.tag {
 				display: flex;
@@ -31,6 +36,7 @@
 
 			.tag-text {
 				height: 1rem;
+				line-height: 0.75;
 			}
 
 			@media screen and (max-width: 450px) {
@@ -40,5 +46,5 @@
 				}
 			}
 		}
-	}
+	} */
 </style>
